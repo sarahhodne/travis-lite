@@ -42,6 +42,11 @@ module Travis
         mustache :repository
       end
 
+      get '/deployed-sha' do
+        content_type :text
+        `git rev-parse HEAD`
+      end
+
       error do
         @error = env['sinatra.error']
         erb :error
