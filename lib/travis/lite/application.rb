@@ -7,10 +7,22 @@ require 'open-uri'
 require 'travis/lite/models/build'
 require 'travis/lite/models/repository'
 
+require 'travis/lite/views/index'
+
+require 'mustache/sinatra'
+
 module Travis
   module Lite
     class Application < Sinatra::Base
+
+      register Mustache::Sinatra
       include Models
+
+      set :mustache, {
+        views: File.expand_path('../views/', __FILE__),
+        templates: File.expand_path('../templates/', __FILE__),
+        namespace: Travis::Lite,
+      }
 
       configure :production do
         disable :raise_exceptions
@@ -27,41 +39,29 @@ module Travis
         repositories_json = JSON.parse(open('https://api.travis-ci.org/repos/').read)
         @repositories = repositories_json.map { |repository| Repository.new(repository) }
 
-        erb :index
+        mustache :index
       end
 
       get '/:user/:repo' do |user, repo|
         slug = "#{user}/#{repo}"
         repository_json = JSON.parse(open("https://api.travis-ci.org/repos/#{slug}").read)
-        repository = Repository.new(repository_json)
+        @repository = Repository.new(repository_json)
 
-        @slug = repository.slug
-        @build_number = repository.last_build_number
-        if repository.last_build_finished?
-          @build_status = repository.last_build_passed? ? 'Passed' : 'Failed'
-        else
-          @build_status = 'Running'
-        end
+        # @slug = repository.slug
+        # @build_number = repository.last_build_number
+        # if repository.last_build_finished?
+        #   @build_status = repository.last_build_passed? ? 'Passed' : 'Failed'
+        # else
+        #   @build_status = 'Running'
+        # end
 
         builds_json = JSON.parse(open("https://api.travis-ci.org/repos/#{slug}/builds").read)
 
-        @builds = builds_json.map do |build_json|
-          Build.new(build_json)
-        end.map do |build|
-          if build.finished?
-            build_status = build.passed? ? 'Passed' : 'Failed'
-          else
-            build_status = 'Running'
-          end
-          {
-            number: build.number,
-            status: build_status,
-          }
-        end
+        @builds = builds_json.map { |build_json| Build.new(build_json) }
 
         # @builds = JSON.pretty_generate(JSON.parse(open("https://api.travis-ci.org/repos/#{slug}/builds").read))
 
-        erb :repository
+        mustache :repository
       end
 
       error do

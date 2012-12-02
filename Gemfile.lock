@@ -3,6 +3,7 @@ GEM
   specs:
     diff-lcs (1.1.3)
     json (1.7.5)
+    mustache (0.99.4)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -29,6 +30,7 @@ PLATFORMS
 
 DEPENDENCIES
   json (~> 1.7)
+  mustache (~> 0.99)
   rack-test (~> 0.6)
   rake (~> 10.0)
   rspec (~> 2.12)

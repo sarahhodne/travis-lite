@@ -1,0 +1,6 @@
+<h1>Latest builds</h1>
+<ul>
+  {{#repositories}}
+    <li><span class="slug"><a href="/{{slug}}">{{slug}}</a></span> — Build #{{last_build_number}} — {{last_build_status}}</li>
+  {{/repositories}}
+</ul>

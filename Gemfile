@@ -3,6 +3,7 @@ source :rubygems
 gem 'rake', '~> 10.0'
 
 gem 'sinatra', '~> 1.3'
+gem 'mustache', '~> 0.99'
 
 gem 'json', '~> 1.7'
 gem 'sass', '~> 3.2'
