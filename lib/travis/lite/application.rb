@@ -46,6 +46,10 @@ module Travis
         @error = env['sinatra.error']
         erb :error
       end
+
+      error(API::NotFoundError) { not_found }
+
+      not_found { erb :not_found }
     end
   end
 end
