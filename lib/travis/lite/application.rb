@@ -1,6 +1,11 @@
 require 'bundler'
 Bundler.require
 
+require 'net/https'
+require 'open-uri'
+
+require 'travis/lite/models/repository'
+
 module Travis
   module Lite
     class Application < Sinatra::Base
@@ -12,10 +17,13 @@ module Travis
       end
 
       get '/style.css' do
-        sass :style
+        scss :style
       end
 
       get '/' do
+        repositories_json = JSON.parse(open('https://api.travis-ci.org/repos/').read)
+        @repositories = repositories_json.map { |repository| Models::Repository.new(repository) }
+
         erb :index
       end
 

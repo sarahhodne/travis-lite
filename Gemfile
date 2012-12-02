@@ -9,6 +9,5 @@ gem 'sass', '~> 3.2'
 
 group :test do
   gem 'rspec', '~> 2.12'
-  gem 'mocha', '~> 0.13'
   gem 'rack-test', '~> 0.6', require: 'rack/test'
 end
