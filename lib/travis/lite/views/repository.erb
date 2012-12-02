@@ -1,5 +1,7 @@
 <h1><%= @slug %></h1>
 
+<ul>
 <% @builds.each do |build| %>
-<h2>Build #<%= build[:number] %> — <%= build[:status] %></h2>
+<li>Build #<%= build[:number] %> — <%= build[:status] %></li>
 <% end %>
+</ul>
