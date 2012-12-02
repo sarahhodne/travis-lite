@@ -1,6 +1,10 @@
 source :rubygems
 
+ruby '1.9.3' rescue nil
+
 gem 'rake', '~> 10.0'
+
+gem 'unicorn'
 
 gem 'sinatra', '~> 1.3'
 gem 'mustache', '~> 0.99', require: 'mustache/sinatra'
@@ -14,4 +18,9 @@ gem 'faraday_middleware', '~> 0.9.0'
 group :test do
   gem 'rspec', '~> 2.12'
   gem 'rack-test', '~> 0.6', require: 'rack/test'
+end
+
+group :development do
+  gem 'foreman'
+  gem 'rerun'
 end
