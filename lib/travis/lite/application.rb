@@ -1,22 +1,15 @@
 require 'bundler'
 Bundler.require
 
-require 'net/https'
-require 'open-uri'
-
-require 'travis/lite/models/build'
-require 'travis/lite/models/repository'
 require 'travis/lite/models/repository_fetcher'
 require 'travis/lite/models/build_fetcher'
 
 require 'travis/lite/views/index'
-
-require 'mustache/sinatra'
+require 'travis/lite/views/repository'
 
 module Travis
   module Lite
     class Application < Sinatra::Base
-
       register Mustache::Sinatra
       include Models
 
