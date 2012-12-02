@@ -4,7 +4,7 @@ Bundler.require
 require 'travis/lite/models/repository_fetcher'
 require 'travis/lite/models/build_fetcher'
 
-require 'travis/lite/views/index'
+require 'travis/lite/views/repositories'
 require 'travis/lite/views/repository'
 
 module Travis
@@ -32,7 +32,7 @@ module Travis
 
       get '/' do
         @repositories = RepositoryFetcher.fetch_recent
-        mustache :index
+        mustache :repositories
       end
 
       get '/:user/:repo' do |user, repo|

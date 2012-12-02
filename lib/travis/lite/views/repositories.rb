@@ -3,20 +3,24 @@ require 'travis/lite/views/layout'
 module Travis
   module Lite
     module Views
-      class Index < Layout
+      class Repositories < Layout
         def repositories
           @repositories.map do |repository|
-            if repository.last_build_finished?
-              last_build_status = repository.last_build_passed? ? 'Passed' : 'Failed'
-            else
-              last_build_status = 'Running'
-            end
-
             {
               slug: repository.slug,
               last_build_number: repository.last_build_number,
-              last_build_status: last_build_status,
+              last_build_status: build_status(repository),
             }
+          end
+        end
+
+        private
+
+        def build_status(repository)
+          if repository.last_build_finished?
+            repository.last_build_passed? ? 'Passed' : 'Failed'
+          else
+            'Running'
           end
         end
       end
