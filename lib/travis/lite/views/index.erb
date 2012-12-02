@@ -9,7 +9,7 @@
     <h1>Latest builds</h1>
     <ul>
     <% @repositories.each do |repository| %>
-      <li><span class="slug"><%= repository.slug %></span> — Build #<%= repository.last_build_number %> —
+      <li><span class="slug"><a href="/<%= repository.slug %>"><%= repository.slug %></a></span> — Build #<%= repository.last_build_number %> —
         <% if repository.last_build_finished? %>
           <%= repository.last_build_passed? ? 'Passed' : 'Failed' %>
         <% else %>
