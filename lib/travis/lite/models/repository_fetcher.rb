@@ -18,11 +18,21 @@ module Travis
         end
 
         def fetch_recent
-          @api.fetch_recent.map { |repository| Repository.new(repository) }
+          convert_to_repositories(@api.fetch_recent)
         end
 
         def fetch_with_slug(slug)
-          Repository.new(@api.fetch_with_slug(slug))
+          convert_to_repository(@api.fetch_with_slug(slug))
+        end
+
+        private
+
+        def convert_to_repositories(repositories)
+          repositories.map { |repository| convert_to_repository(repository) }
+        end
+
+        def convert_to_repository(repository)
+          Repository.new(repository)
         end
       end
     end
