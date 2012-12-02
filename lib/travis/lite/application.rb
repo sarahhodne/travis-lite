@@ -7,6 +7,7 @@ require 'open-uri'
 require 'travis/lite/models/build'
 require 'travis/lite/models/repository'
 require 'travis/lite/models/repository_fetcher'
+require 'travis/lite/models/build_fetcher'
 
 require 'travis/lite/views/index'
 
@@ -44,10 +45,7 @@ module Travis
       get '/:user/:repo' do |user, repo|
         slug = "#{user}/#{repo}"
         @repository = RepositoryFetcher.fetch_with_slug(slug)
-
-        builds_json = JSON.parse(open("https://api.travis-ci.org/repos/#{slug}/builds").read)
-        @builds = builds_json.map { |build_json| Build.new(build_json) }
-
+        @builds = BuildFetcher.fetch_recent_for_slug(slug)
         mustache :repository
       end
 

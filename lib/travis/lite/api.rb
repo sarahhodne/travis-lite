@@ -21,6 +21,10 @@ module Travis
       def fetch_with_slug(slug)
         @conn.get("/repos/#{slug}").body
       end
+
+      def fetch_recent_for_slug(slug)
+        @conn.get("/repos/#{slug}/builds").body
+      end
     end
   end
 end
