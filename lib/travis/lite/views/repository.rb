@@ -15,15 +15,36 @@ module Travis
         private
 
         def convert_build(build)
-          if build.finished?
-            build_status = build.passed? ? 'Passed' : 'Failed'
-          else
-            build_status = 'Running'
-          end
           {
             number: build.number,
-            status: build_status,
+            status: format_build_status(build_status(build)),
+            message: build.message,
+            branch: build.branch,
+            row_class: class_for_build_status(build_status(build)),
           }
+        end
+
+        private
+
+        def build_status(build)
+          if build.finished?
+            build.passed? ? :passed : :failed
+          else
+            :running
+          end
+        end
+
+        def format_build_status(status)
+          status.to_s.capitalize
+        end
+
+        def class_for_build_status(status)
+          case status
+          when :passed
+            :success
+          when :failed
+            :error
+          end
         end
       end
     end

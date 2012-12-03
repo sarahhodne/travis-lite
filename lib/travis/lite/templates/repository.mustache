@@ -1,7 +1,24 @@
-<h1>{{slug}}</h1>
+<div class="page-header">
+  <h1>{{slug}}</h1>
+</div>
 
-<ul>
-  {{#builds}}
-    <li>Build #{{number}} — {{status}}</li>
-  {{/builds}}
-</ul>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Build</th>
+      <th>Build status</th>
+      <th>Branch</th>
+      <th>Commit message</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#builds}}
+      <tr class="{{row_class}}">
+        <td>#{{number}}</td>
+        <td>{{{status}}}</td>
+        <td>{{branch}}</td>
+        <td>{{message}}</td>
+      </tr>
+    {{/builds}}
+  </tbody>
+</table>

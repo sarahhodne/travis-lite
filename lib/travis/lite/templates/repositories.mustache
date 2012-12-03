@@ -1,6 +1,22 @@
-<h1>Latest builds</h1>
-<ul>
-  {{#repositories}}
-    <li><span class="slug"><a href="/{{slug}}">{{slug}}</a></span> — Build #{{last_build_number}} — {{last_build_status}}</li>
-  {{/repositories}}
-</ul>
+<div class="page-header">
+  <h1>Latest builds</h1>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Repository name</th>
+      <th>Last build</th>
+      <th>Last build status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#repositories}}
+      <tr>
+        <td><a href="/{{slug}}">{{slug}}</a></td>
+        <td>#{{last_build_number}}</td>
+        <td>{{{last_build_status}}}</td>
+      </tr>
+    {{/repositories}}
+  </tbody>
+</table>

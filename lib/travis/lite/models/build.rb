@@ -33,6 +33,14 @@ module Travis
         def finished_at
           @data['finished_at']
         end
+
+        def message
+          @data['message']
+        end
+
+        def branch
+          @data['branch']
+        end
       end
     end
   end
