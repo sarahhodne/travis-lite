@@ -17,10 +17,10 @@ The URLs will mostly be the same as for the main Travis site.
 
 ## Live Version
 
-There is a version of this app live at <http://travis-lite.herokuapp.com>. Go to [/deployed-sha][] to see what commit
+There is a version of this app live at <http://travis-lite.com>. Go to [/deployed-sha][] to see what commit
 is currently deployed.
 
-[/deployed-sha]: http://travis-lite.herokuapp.com/deployed-sha
+[/deployed-sha]: http://travis-lite.com/deployed-sha
 
 ## Contributions
 
