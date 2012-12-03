@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>{{title}}</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
   <link rel="stylesheet" href="/style.css">
+
+  <script src="/javascript/bootstrap.min.js"></script>
 </head>
 <body>
-  <div id="content">
+  <div class="container">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="/">Travis Lite</a>
+      </div>
+    </div>
+
     {{{yield}}}
   </div>
 </body>

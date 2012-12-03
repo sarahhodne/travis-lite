@@ -26,6 +26,8 @@ module Travis
         set :sass, style: :compressed
       end
 
+      set :public_folder, File.expand_path('../../../../assets', __FILE__)
+
       get '/style.css' do
         scss :style
       end
