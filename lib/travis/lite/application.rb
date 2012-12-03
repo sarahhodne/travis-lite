@@ -28,6 +28,10 @@ module Travis
 
       set :public_folder, File.expand_path('../../../../assets', __FILE__)
 
+      before do
+        @request_path = env['REQUEST_PATH']
+      end
+
       get '/style.css' do
         scss :style
       end

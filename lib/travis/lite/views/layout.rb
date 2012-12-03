@@ -5,6 +5,10 @@ module Travis
         def title
           @title || 'Travis Lite'
         end
+
+        def full_page_url
+          "http://travis-ci.org#{@request_path}"
+        end
       end
     end
   end
