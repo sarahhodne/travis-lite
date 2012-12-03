@@ -10,6 +10,7 @@ module Travis
               slug: repository.slug,
               last_build_number: repository.last_build_number,
               last_build_status: format_build_status(build_status(repository)),
+              row_class: class_for_build_status(build_status(repository)),
             }
           end
         end
@@ -32,6 +33,15 @@ module Travis
             '<span class="text-error">Failed</span>'
           when :running
             'Running'
+          end
+        end
+
+        def class_for_build_status(status)
+          case status
+          when :passed
+            :success
+          when :failed
+            :error
           end
         end
       end
