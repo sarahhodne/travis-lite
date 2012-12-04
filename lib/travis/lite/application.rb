@@ -44,8 +44,7 @@ module Travis
         mustache :repositories
       end
 
-      get '/deployed-sha' do
-        content_type :text
+      get '/deployed-sha', provides: :txt do
         `git rev-parse HEAD`
       end
 
