@@ -13,6 +13,7 @@ GEM
     listen (0.5.3)
     multipart-post (1.1.5)
     mustache (0.99.4)
+    newrelic_rpm (3.4.2.1)
     rack (1.4.1)
     rack-protection (1.2.0)
       rack
@@ -51,6 +52,7 @@ DEPENDENCIES
   foreman
   json (~> 1.7)
   mustache (~> 0.99)
+  newrelic_rpm
   rack-test (~> 0.6)
   rake (~> 10.0)
   rerun

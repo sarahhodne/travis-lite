@@ -15,6 +15,8 @@ gem 'sass', '~> 3.2'
 gem 'faraday', '~> 0.8.4'
 gem 'faraday_middleware', '~> 0.9.0'
 
+gem 'newrelic_rpm'
+
 group :test do
   gem 'rspec', '~> 2.12'
   gem 'rack-test', '~> 0.6', require: 'rack/test'

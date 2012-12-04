@@ -24,6 +24,8 @@ module Travis
         disable :show_exceptions
 
         set :sass, style: :compressed
+
+        require 'newrelic_rpm'
       end
 
       set :public_folder, File.expand_path('../../../../assets', __FILE__)
