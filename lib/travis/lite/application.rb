@@ -43,6 +43,10 @@ module Travis
         mustache :repositories
       end
 
+      get '/:user/?' do |user|
+        mustache :repositories
+      end
+
       get '/:user/:repo' do |user, repo|
         slug = "#{user}/#{repo}"
         @repository = RepositoryFetcher.fetch_with_slug(slug)

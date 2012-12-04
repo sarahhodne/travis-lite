@@ -13,6 +13,10 @@ module Travis
           new(Travis::Lite::API.new).fetch_with_slug(slug)
         end
 
+        def self.fetch_with_owner_name(owner_name)
+          new(Travis::Lite::API.new).fetch_with_owner_name(owner_name)
+        end
+
         def initialize(api)
           @api = api
         end
@@ -23,6 +27,10 @@ module Travis
 
         def fetch_with_slug(slug)
           convert_to_repository(@api.fetch_with_slug(slug))
+        end
+
+        def fetch_with_owner_name(owner_name)
+          convert_to_repositories(@api.fetch_with_owner_name(owner_name))
         end
 
         private
