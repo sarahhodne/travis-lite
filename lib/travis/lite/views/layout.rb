@@ -3,7 +3,7 @@ module Travis
     module Views
       class Layout < Mustache
         def title
-          @title || 'Travis Lite'
+          @title
         end
 
         def full_page_url

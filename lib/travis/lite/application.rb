@@ -40,15 +40,19 @@ module Travis
 
       get '/' do
         @repositories = RepositoryFetcher.fetch_recent
+        @title = 'Latest Builds'
         mustache :repositories
       end
 
       get '/:user/?' do |user|
+        @repositories = RepositoryFetcher.fetch_with_owner_name(user)
+        @title = "#{user}'s repositories"
         mustache :repositories
       end
 
       get '/:user/:repo' do |user, repo|
         slug = "#{user}/#{repo}"
+        @title = slug
         @repository = RepositoryFetcher.fetch_with_slug(slug)
         @builds = BuildFetcher.fetch_recent_for_slug(slug)
         mustache :repository
