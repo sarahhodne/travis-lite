@@ -44,6 +44,11 @@ module Travis
         mustache :repositories
       end
 
+      get '/deployed-sha' do
+        content_type :text
+        `git rev-parse HEAD`
+      end
+
       get '/:user/?' do |user|
         @repositories = RepositoryFetcher.fetch_with_owner_name(user)
         @title = "#{user}'s repositories"
@@ -56,11 +61,6 @@ module Travis
         @repository = RepositoryFetcher.fetch_with_slug(slug)
         @builds = BuildFetcher.fetch_recent_for_slug(slug)
         mustache :repository
-      end
-
-      get '/deployed-sha' do
-        content_type :text
-        `git rev-parse HEAD`
       end
 
       error do
