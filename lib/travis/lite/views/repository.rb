@@ -16,6 +16,7 @@ module Travis
 
         def convert_build(build)
           {
+            id: build.id,
             number: build.number,
             status: format_build_status(build_status(build)),
             message: build.message,

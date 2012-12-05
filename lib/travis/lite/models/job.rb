@@ -1,9 +1,9 @@
-require 'travis/lite/models/matrix'
+require 'travis/lite/models/config'
 
 module Travis
   module Lite
     module Models
-      class Build
+      class Job
         def initialize(data)
           @data = data
         end
@@ -16,6 +16,10 @@ module Travis
           @data['number']
         end
 
+        def build_id
+          @data['build_id']
+        end
+
         def finished?
           @data['state'] == 'finished'
         end
@@ -24,28 +28,24 @@ module Travis
           @data['result'] == 0
         end
 
-        def duration
-          @data['duration']
+        def branch
+          @data['branch']
         end
 
-        def started_at
-          @data['started_at']
-        end
-
-        def finished_at
-          @data['finished_at']
+        def compare_url
+          @data['compare_url']
         end
 
         def message
           @data['message']
         end
 
-        def branch
-          @data['branch']
+        def config
+          Config.new(@data['config'])
         end
 
-        def matrix
-          @data['matrix'].map { |matrix| Matrix.new(matrix) }
+        def log
+          @data['log']
         end
       end
     end

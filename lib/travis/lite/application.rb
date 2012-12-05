@@ -6,9 +6,12 @@ require 'gh'
 
 require 'travis/lite/models/repository_fetcher'
 require 'travis/lite/models/build_fetcher'
+require 'travis/lite/models/job_fetcher'
 
 require 'travis/lite/views/repositories'
 require 'travis/lite/views/repository'
+require 'travis/lite/views/build'
+require 'travis/lite/views/job'
 
 module Travis
   module Lite
@@ -64,6 +67,26 @@ module Travis
         @repository = RepositoryFetcher.fetch_with_slug(slug)
         @builds = BuildFetcher.fetch_recent_for_slug(slug)
         mustache :repository
+      end
+
+      get '/:user/:repo/builds/:build' do |user, repo, build|
+        slug = "#{user}/#{repo}"
+        @title = slug
+        @repository = RepositoryFetcher.fetch_with_slug(slug)
+        @build = BuildFetcher.fetch_build_for_slug(slug, build)
+        if @build.matrix.size == 1
+          redirect "#{slug}/jobs/#{@build.matrix.first.id}"
+        else
+          mustache :build
+        end
+      end
+
+      get '/:user/:repo/jobs/:job' do |user, repo, job|
+        slug = "#{user}/#{repo}"
+        @title = slug
+        @repository = RepositoryFetcher.fetch_with_slug(slug)
+        @job = JobFetcher.fetch_job(job)
+        mustache :job
       end
 
       error do

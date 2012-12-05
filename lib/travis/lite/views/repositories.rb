@@ -8,6 +8,7 @@ module Travis
           @repositories.map do |repository|
             {
               slug: repository.slug,
+              last_build_id: repository.last_build_id,
               last_build_number: repository.last_build_number,
               last_build_status: format_build_status(build_status(repository)),
               row_class: class_for_build_status(build_status(repository)),

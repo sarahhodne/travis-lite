@@ -29,8 +29,16 @@ module Travis
         handle_response @conn.get("/repos/#{slug}/builds")
       end
 
+      def fetch_build_for_slug(slug, build)
+        handle_response @conn.get("/repos/#{slug}/builds/#{build}")
+      end
+
       def fetch_with_owner_name(owner_name)
         handle_response @conn.get('/repos', owner_name: owner_name)
+      end
+
+      def fetch_job(job)
+        handle_response @conn.get("/jobs/#{job}")
       end
 
       private
