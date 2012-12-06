@@ -25,6 +25,8 @@ is currently deployed.
 
 [/deployed-sha]: http://travis-lite.com/deployed-sha
 
+Travis Lite is set up to deploy as soon as a build passes on master. See `script/deploy` for details.
+
 ## Contributions
 
 See the CONTRIBUTING.md file.
