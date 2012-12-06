@@ -15,5 +15,5 @@ describe Travis::Lite::Models::RepositoryFetcher, '#fetch_with_slug' do
     subject
   end
 
-  it { should be_a(Travis::Lite::Models::Repository) }
+  it { expect(subject).to be_a(Travis::Lite::Models::Repository) }
 end

@@ -18,6 +18,6 @@ describe Travis::Lite::Models::BuildFetcher, '#fetch_recent_for_slug' do
   it { should have(10).items }
 
   it 'should convert the result to Build objects' do
-    subject.first.should be_a(Travis::Lite::Models::Build)
+    expect(subject.first).to be_a(Travis::Lite::Models::Build)
   end
 end

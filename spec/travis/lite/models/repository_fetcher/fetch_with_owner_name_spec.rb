@@ -18,6 +18,6 @@ describe Travis::Lite::Models::RepositoryFetcher, '#fetch_with_owner_name' do
   it { should have(10).items }
 
   it 'should convert the result to Repository objects' do
-    subject.first.should be_a(Travis::Lite::Models::Repository)
+    expect(subject.first).to be_a(Travis::Lite::Models::Repository)
   end
 end
