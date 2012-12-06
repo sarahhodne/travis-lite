@@ -16,6 +16,7 @@ module Travis
 
         def convert_build(build)
           {
+            id: build.id,
             number: build.number,
             status: format_build_status(build_status(build)),
             message: build.message,
@@ -31,19 +32,6 @@ module Travis
             build.passed? ? :passed : :failed
           else
             :running
-          end
-        end
-
-        def format_build_status(status)
-          status.to_s.capitalize
-        end
-
-        def class_for_build_status(status)
-          case status
-          when :passed
-            :success
-          when :failed
-            :error
           end
         end
       end

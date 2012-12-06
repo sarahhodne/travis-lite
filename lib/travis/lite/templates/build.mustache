@@ -1,0 +1,22 @@
+<div class="page-header">
+  <h1>{{slug}} - Build #{{build_number}}</h1>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Job</th>
+      <th>Job status</th>
+      <th>Language</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#matrix}}
+      <tr class="{{row_class}}">
+        <td><a href="/{{slug}}/jobs/{{id}}">#{{number}}</a></td>
+        <td>{{status}}</td>
+        <td>{{config_label}}</td>
+      </tr>
+    {{/matrix}}
+  </tbody>
+</table>

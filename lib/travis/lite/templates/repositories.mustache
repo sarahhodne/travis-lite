@@ -14,7 +14,7 @@
     {{#repositories}}
       <tr class="{{row_class}}">
         <td><a href="/{{slug}}">{{slug}}</a></td>
-        <td>#{{last_build_number}}</td>
+        <td><a href="/{{slug}}/builds/{{last_build_id}}">#{{last_build_number}}</a></td>
         <td>{{{last_build_status}}}</td>
       </tr>
     {{/repositories}}
