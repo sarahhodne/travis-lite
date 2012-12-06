@@ -27,10 +27,7 @@ is currently deployed.
 
 ## Contributions
 
-Contributions are welcome! If you find a bug, please report it in [the issue tracker][issues]. If you know how to fix
-it, or if you can write a failing spec, a pull request would be greatly appreciated.
-
-[issues]: https://github.com/henrikhodne/travis-lite
+See the CONTRIBUTING.md file.
 
 ## License
 
