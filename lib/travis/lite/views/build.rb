@@ -22,35 +22,20 @@ module Travis
           {
             id: matrix.id,
             number: matrix.number,
-            status: format_status(status(matrix)),
+            status: format_build_status(matrix_status(matrix)),
             config_label: matrix.config.label,
             allow_failure: matrix.allow_failure?,
-            row_class: class_for_status(status(matrix), matrix.allow_failure?)
+            row_class: class_for_build_status(matrix_status(matrix))
           }
         end
 
         private
 
-        def status(matrix)
+        def matrix_status(matrix)
           if matrix.finished?
             matrix.passed? ? :passed : :failed
           else
             :running
-          end
-        end
-
-        def format_status(status)
-          status.to_s.capitalize
-        end
-
-        def class_for_status(status, allow_failure)
-          case status
-          when :passed
-            :success
-          when :failed
-            :error
-          when :running
-            :warning
           end
         end
       end

@@ -25,8 +25,8 @@ module Travis
         def convert_job(job)
           {
             build_id: job.build_id,
-            status: status(job),
-            status_class: class_for_status(status(job)),
+            status: format_build_status(job_status(job)),
+            status_class: class_for_build_status(job_status(job)),
             branch: job.branch,
             config_label: job.config.label,
             config: job.config.inspect,
@@ -36,26 +36,11 @@ module Travis
           }
         end
 
-        def status(job)
+        def job_status(job)
           if job.finished?
             job.passed? ? :passed : :failed
           else
             :running
-          end
-        end
-
-        def format_status(status)
-          status.to_s.capitalize
-        end
-
-        def class_for_status(status)
-          case status
-          when :passed
-            :success
-          when :failed
-            :error
-          when :running
-            :warning
           end
         end
       end

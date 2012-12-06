@@ -25,26 +25,6 @@ module Travis
             :running
           end
         end
-
-        def format_build_status(status)
-          case status
-          when :passed
-            '<span class="text-success">Passed</span>'
-          when :failed
-            '<span class="text-error">Failed</span>'
-          when :running
-            'Running'
-          end
-        end
-
-        def class_for_build_status(status)
-          case status
-          when :passed
-            :success
-          when :failed
-            :error
-          end
-        end
       end
     end
   end
