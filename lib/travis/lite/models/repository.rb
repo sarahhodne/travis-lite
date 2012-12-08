@@ -23,7 +23,7 @@ module Travis
         end
 
         def last_build_finished?
-          @data['last_build_status'] == 0
+          !!@data['last_build_finished_at']
         end
 
         def last_build_passed?
