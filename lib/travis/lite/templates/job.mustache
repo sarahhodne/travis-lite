@@ -1,0 +1,23 @@
+<div class="page-header">
+  <h1>{{slug}} - Build #{{job_number}}</a></h1>
+</div>
+
+{{#job}}
+<div>
+  <ul>
+    <li>Repo: <a href="/{{slug}}">{{slug}}</a></li>
+    <li>Build <a href="/{{slug}}/builds/{{build_id}}">#{{build_number}}</a></li>
+    <li>Status: <span class="label label-{{status_class}}">{{status}}</li>
+    <li>Branch: {{branch}}</li>
+    <li>Language: {{config_label}}</li>
+    <li>Compare on <a href="{{compare_url}}">GitHub</a></li>
+    <li>Message: <pre>{{message}}</pre></li>
+  </ul>
+</div>
+
+<h3>Log</h3>
+<pre>{{log}}</pre>
+
+<h3>Config</h3>
+<pre>{{config}}</pre>
+{{/job}}
