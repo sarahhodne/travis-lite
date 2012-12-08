@@ -21,7 +21,7 @@ module Travis
 
       set :mustache, {
         views: File.expand_path('../views/', __FILE__),
-        templates: File.expand_path('../templates/', __FILE__),
+        templates: 'templates/',
         namespace: Travis::Lite,
       }
 
