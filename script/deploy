@@ -18,26 +18,29 @@ if [[ "$TRAVIS" == "true" ]]; then
   fi
 
   wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
+  if ! have heroku; then
+    echo "The heroku toolbelt is not installed. Please install it: https://toolbelt.heroku.com."
+    exit 1
+  fi
+
+  git remote add heroku git@heroku.com:travis-lite-staging.git
+
+  echo "Host heroku.com" >> ~/.ssh/config
+  echo "  StrictHostKeyChecking no" >> ~/.ssh/config
+  echo "  CheckHostIP no" >> ~/.ssh/config
+  echo "  UserKnownHostsFile=/dev/null" >> ~/.ssh/config
+
+  branch="$(git symbolic-ref HEAD 2>/dev/null)"
+  branch="${branch#refs/heads/}"
+
+  mkdir -p ~/.ssh
+  ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa -C "travis-deployment"
+
+  yes | heroku keys:add
+  yes | git push heroku $branch
+  yes | heroku keys:remove "travis-deployment"
+else
+  echo "This script was only designed to be run on Travis. Running it locally"
+  echo "will most probably break something."
 fi
-
-if ! have heroku; then
-  echo "The heroku toolbelt is not installed. Please install it: https://toolbelt.heroku.com."
-  exit 1
-fi
-
-git remote add heroku git@heroku.com:travis-lite-staging.git
-
-echo "Host heroku.com" >> ~/.ssh/config
-echo "  StrictHostKeyChecking no" >> ~/.ssh/config
-echo "  CheckHostIP no" >> ~/.ssh/config
-echo "  UserKnownHostsFile=/dev/null" >> ~/.ssh/config
-
-branch="$(git symbolic-ref HEAD 2>/dev/null)"
-branch="${branch#refs/heads/}"
-
-mkdir -p ~/.ssh
-ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa -C "travis-deployment"
-
-yes | heroku keys:add
-yes | git push heroku $branch
-yes | heroku keys:remove "travis-deployment"
