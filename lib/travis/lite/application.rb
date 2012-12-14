@@ -50,7 +50,7 @@ module Travis
         mustache :repositories
       end
 
-      get '/deployed-sha', provides: :txt do
+      get '/deployed-sha/?', provides: :txt do
         short_sha = Heroku::API.new.get_releases('travis-lite').body.last['commit']
         long_sha = GH["repos/henrikhodne/travis-lite/commits/#{short_sha}"]['sha']
       end
