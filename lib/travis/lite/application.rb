@@ -61,7 +61,7 @@ module Travis
         mustache :repositories
       end
 
-      get '/:user/:repo' do |user, repo|
+      get '/:user/:repo/?' do |user, repo|
         slug = "#{user}/#{repo}"
         @title = slug
         @repository = RepositoryFetcher.fetch_with_slug(slug)
@@ -69,7 +69,7 @@ module Travis
         mustache :repository
       end
 
-      get '/:user/:repo/builds/:build' do |user, repo, build|
+      get '/:user/:repo/builds/:build/?' do |user, repo, build|
         slug = "#{user}/#{repo}"
         @title = slug
         @repository = RepositoryFetcher.fetch_with_slug(slug)
@@ -81,7 +81,7 @@ module Travis
         end
       end
 
-      get '/:user/:repo/jobs/:job' do |user, repo, job|
+      get '/:user/:repo/jobs/:job/?' do |user, repo, job|
         slug = "#{user}/#{repo}"
         @title = slug
         @repository = RepositoryFetcher.fetch_with_slug(slug)
