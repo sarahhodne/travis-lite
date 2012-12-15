@@ -17,9 +17,6 @@ gem 'faraday_middleware', '~> 0.9.0'
 
 gem 'newrelic_rpm'
 
-gem 'heroku-api'
-gem 'gh'
-
 group :test do
   gem 'rspec', '~> 2.12'
   gem 'rack-test', '~> 0.6', require: 'rack/test'

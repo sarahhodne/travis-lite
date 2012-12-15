@@ -1,9 +1,6 @@
 require 'bundler'
 Bundler.require
 
-require 'heroku-api'
-require 'gh'
-
 require 'travis/lite/models/repository_fetcher'
 require 'travis/lite/models/build_fetcher'
 require 'travis/lite/models/job_fetcher'
@@ -48,11 +45,6 @@ module Travis
         @repositories = RepositoryFetcher.fetch_recent
         @title = 'Latest Builds'
         mustache :repositories
-      end
-
-      get '/deployed-sha', provides: :txt do
-        short_sha = Heroku::API.new.get_releases('travis-lite').body.last['commit']
-        long_sha = GH["repos/henrikhodne/travis-lite/commits/#{short_sha}"]['sha']
       end
 
       get '/:user/?' do |user|
