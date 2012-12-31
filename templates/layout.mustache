@@ -3,25 +3,26 @@
 <head>
   <title>{{title}} - Travis Lite</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-  <div class="navbar navbar-static-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="brand" href="/">Travis Lite</a>
-        <ul class="nav pull-right">
+  <div class="contain-to-grid">
+    <nav class="top-bar">
+      <ul>
+        <li class="name"><h1><a href="/">Travis Lite</a></h1></li>
+        <li class="toggle-topbar"><a href="#"></a></li>
+      </ul>
+
+      <section>
+        <ul class="right">
           <li><a href="https://github.com/henrikhodne/travis-lite">Travis Lite on GitHub</a></li>
         </ul>
-      </div>
-    </div>
+      </section>
+    </nav>
   </div>
 
-  <div class="container">
-    {{{yield}}}
-  </div>
+  {{{yield}}}
+
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="/javascript/bootstrap.min.js"></script>
   <script type="text/javascript">

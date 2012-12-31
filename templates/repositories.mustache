@@ -1,22 +1,28 @@
-<div class="page-header">
-  <h1>{{title}}</h1>
+<div class="row">
+  <div class="twelve columns">
+    <h2>{{title}}</h2>
+  </div>
 </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Repository name</th>
-      <th>Last build</th>
-      <th>Last build status</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#repositories}}
-      <tr class="{{row_class}}">
-        <td><a href="/{{slug}}">{{slug}}</a></td>
-        <td><a href="/{{slug}}/builds/{{last_build_id}}">#{{last_build_number}}</a></td>
-        <td>{{{last_build_status}}}</td>
-      </tr>
-    {{/repositories}}
-  </tbody>
-</table>
+<div class="row">
+  <div class="twelve columns">
+    <table class="twelve">
+      <thead>
+        <tr>
+          <th>Repository name</th>
+          <th>Last build</th>
+          <th>Last build status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#repositories}}
+          <tr class="{{row_class}}">
+            <td><a href="/{{slug}}">{{slug}}</a></td>
+            <td><a href="/{{slug}}/builds/{{last_build_id}}">#{{last_build_number}}</a></td>
+            <td>{{{last_build_status}}}</td>
+          </tr>
+        {{/repositories}}
+      </tbody>
+    </table>
+  </div>
+</div>
