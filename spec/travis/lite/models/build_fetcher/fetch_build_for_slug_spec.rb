@@ -16,6 +16,6 @@ describe Travis::Lite::Models::BuildFetcher, '#fetch_build_for_slug' do
   end
 
   it 'should convert the result to Build object' do
-    subject.should be_a(Travis::Lite::Models::Build)
+    expect(subject).to be_a(Travis::Lite::Models::Build)
   end
 end

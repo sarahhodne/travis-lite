@@ -15,6 +15,6 @@ describe Travis::Lite::Models::JobFetcher, '#fetch_job' do
   end
 
   it 'should convert the result to Job object' do
-    subject.should be_a(Travis::Lite::Models::Job)
+    expect(subject).to be_a(Travis::Lite::Models::Job)
   end
 end
