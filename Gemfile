@@ -25,4 +25,5 @@ end
 group :development do
   gem 'foreman'
   gem 'rerun'
+  gem 'pry'
 end
