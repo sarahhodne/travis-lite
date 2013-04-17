@@ -20,10 +20,7 @@ The URLs will mostly be the same as for the main Travis site.
 
 ## Live Version
 
-There is a version of this app live at <http://travis-lite.com>. Go to [/deployed-sha][] to see what commit
-is currently deployed.
-
-[/deployed-sha]: http://travis-lite.com/deployed-sha
+There is a version of this app live at <http://travis-lite.com>.
 
 Travis Lite is set up to deploy as soon as a build passes on master. See `script/deploy` for details.
 
