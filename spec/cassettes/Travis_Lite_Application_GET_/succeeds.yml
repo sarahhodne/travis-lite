@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.travis-ci.org/repos/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.travis-ci.2+json, */*; q=0.01
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 30
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, Expires, Etag, Last-Modified
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json;charset=utf-8
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept,Accept-Encoding
+      X-Accepted-Oauth-Scopes:
+      - public
+      X-Oauth-Scopes:
+      - public
+      Content-Length:
+      - '1898'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"repos":[{"id":207439,"slug":"onepercentclub/bluebottle","description":"The
+        repository for Project Bluebottle, the crowdsourcing framework initiated by
+        the 1%CLUB.","last_build_id":6490250,"last_build_number":"1283","last_build_state":"started","last_build_duration":null,"last_build_language":null,"last_build_started_at":"2013-04-20T08:59:39Z","last_build_finished_at":null},{"id":378287,"slug":"colobot/colobot","description":"Source
+        code of open-source Colobot project developed by Epsitec and Polish Portal
+        of Colobot (PPC)","last_build_id":6490247,"last_build_number":"131","last_build_state":"started","last_build_duration":null,"last_build_language":null,"last_build_started_at":"2013-04-20T08:59:09Z","last_build_finished_at":null},{"id":314566,"slug":"EcoCityCraft/Spigot","description":"High
+        performance Minecraft server implementation","last_build_id":6490172,"last_build_number":"160","last_build_state":"started","last_build_duration":null,"last_build_language":null,"last_build_started_at":"2013-04-20T08:59:02Z","last_build_finished_at":null},{"id":341377,"slug":"robgleeson/ichannel","description":"interprocess
+        communication channel","last_build_id":6490234,"last_build_number":"102","last_build_state":"started","last_build_duration":null,"last_build_language":null,"last_build_started_at":"2013-04-20T08:58:10Z","last_build_finished_at":null},{"id":484574,"slug":"iiirc/iiirc","description":"Rebirh
+        for IRC","last_build_id":6490231,"last_build_number":"39","last_build_state":"passed","last_build_duration":374,"last_build_language":null,"last_build_started_at":"2013-04-20T08:57:55Z","last_build_finished_at":"2013-04-20T08:59:36Z"},{"id":482261,"slug":"joker1007/seirenes","description":null,"last_build_id":6490229,"last_build_number":"88","last_build_state":"started","last_build_duration":null,"last_build_language":null,"last_build_started_at":"2013-04-20T08:57:47Z","last_build_finished_at":null},{"id":815994,"slug":"xavierdutreilh/zerosum-api","description":"Application
+        running on http://api.zerosum.io/","last_build_id":6490227,"last_build_number":"3","last_build_state":"passed","last_build_duration":61,"last_build_language":null,"last_build_started_at":"2013-04-20T08:57:34Z","last_build_finished_at":"2013-04-20T08:58:35Z"},{"id":510159,"slug":"softwerkskammer/NeuePlattform-Implementierung","description":"Hier
+        wird''s ernst :-)","last_build_id":6490225,"last_build_number":"310","last_build_state":"passed","last_build_duration":61,"last_build_language":null,"last_build_started_at":"2013-04-20T08:56:40Z","last_build_finished_at":"2013-04-20T08:57:41Z"},{"id":815398,"slug":"sue445/gaerminal","description":"WIP","last_build_id":6490218,"last_build_number":"19","last_build_state":"passed","last_build_duration":202,"last_build_language":null,"last_build_started_at":"2013-04-20T08:56:00Z","last_build_finished_at":"2013-04-20T08:57:32Z"},{"id":137385,"slug":"versioneye/naturalsorter","description":"Sorting
+        an array in a natural way","last_build_id":6490203,"last_build_number":"7","last_build_state":"passed","last_build_duration":18,"last_build_language":null,"last_build_started_at":"2013-04-20T08:55:00Z","last_build_finished_at":"2013-04-20T08:55:18Z"},{"id":539966,"slug":"cstorey/srsrb","description":"","last_build_id":6490199,"last_build_number":"70","last_build_state":"passed","last_build_duration":313,"last_build_language":null,"last_build_started_at":"2013-04-20T08:54:19Z","last_build_finished_at":"2013-04-20T08:56:57Z"},{"id":825853,"slug":"nisshiee/towerdefence-scala","description":"","last_build_id":6490194,"last_build_number":"3","last_build_state":"failed","last_build_duration":54,"last_build_language":null,"last_build_started_at":"2013-04-20T08:53:09Z","last_build_finished_at":"2013-04-20T08:54:03Z"},{"id":25952,"slug":"libgit2/rugged","description":"ruby
+        bindings to libgit2","last_build_id":6490180,"last_build_number":"392","last_build_state":"passed","last_build_duration":417,"last_build_language":null,"last_build_started_at":"2013-04-20T08:52:44Z","last_build_finished_at":"2013-04-20T08:56:38Z"},{"id":194023,"slug":"frankshearar/squeak-ci","description":"Base
+        environment for running Squeak continuous integration tests.","last_build_id":6490192,"last_build_number":"155","last_build_state":"started","last_build_duration":null,"last_build_language":null,"last_build_started_at":"2013-04-20T08:52:35Z","last_build_finished_at":null},{"id":823706,"slug":"watoki/dom","description":"A
+        minimal (X)HTML/XML parser for PHP","last_build_id":6490189,"last_build_number":"3","last_build_state":"passed","last_build_duration":44,"last_build_language":null,"last_build_started_at":"2013-04-20T08:52:30Z","last_build_finished_at":"2013-04-20T08:52:52Z"},{"id":448219,"slug":"curvedmark/roole","description":"A
+        language that compiles to CSS","last_build_id":6490186,"last_build_number":"105","last_build_state":"passed","last_build_duration":52,"last_build_language":null,"last_build_started_at":"2013-04-20T08:52:07Z","last_build_finished_at":"2013-04-20T08:52:42Z"},{"id":11467,"slug":"libgit2/libgit2","description":"The
+        Library","last_build_id":6490174,"last_build_number":"2619","last_build_state":"passed","last_build_duration":701,"last_build_language":null,"last_build_started_at":"2013-04-20T08:51:20Z","last_build_finished_at":"2013-04-20T08:54:42Z"},{"id":9724,"slug":"ZeissS/wobble","description":"Wooble
+        it is! - My Google Wave Clone","last_build_id":6490169,"last_build_number":"200","last_build_state":"failed","last_build_duration":21,"last_build_language":null,"last_build_started_at":"2013-04-20T08:50:49Z","last_build_finished_at":"2013-04-20T08:51:02Z"},{"id":449860,"slug":"BeamApp/Transit","description":"Library
+        to Bridge between JavaScript and iOS, OSX, Android","last_build_id":6490163,"last_build_number":"123","last_build_state":"started","last_build_duration":null,"last_build_language":null,"last_build_started_at":"2013-04-20T08:50:45Z","last_build_finished_at":null},{"id":3276,"slug":"xaviershay/enki","description":"A
+        Ruby on Rails blogging app for the fashionable developer. It''s better than
+        Mephisto or SimpleLog","last_build_id":6490165,"last_build_number":"44","last_build_state":"passed","last_build_duration":126,"last_build_language":null,"last_build_started_at":"2013-04-20T08:50:31Z","last_build_finished_at":"2013-04-20T08:52:37Z"},{"id":8424,"slug":"CocoaPods/Specs","description":"A
+        repository of CocoaPods (cocoapods.org) specifications.","last_build_id":6490155,"last_build_number":"7360","last_build_state":"passed","last_build_duration":120,"last_build_language":null,"last_build_started_at":"2013-04-20T08:49:23Z","last_build_finished_at":"2013-04-20T08:50:25Z"},{"id":307585,"slug":"payutc/server","description":"Serveur
+        utilis\u00e9 pour payutc","last_build_id":6490158,"last_build_number":"59","last_build_state":"errored","last_build_duration":790,"last_build_language":null,"last_build_started_at":"2013-04-20T08:49:20Z","last_build_finished_at":"2013-04-20T08:57:12Z"},{"id":230911,"slug":"saschazelzer/CppMicroServices","description":"An
+        OSGi-like C++ dynamic service registry","last_build_id":6489834,"last_build_number":"30","last_build_state":"passed","last_build_duration":1016,"last_build_language":null,"last_build_started_at":"2013-04-20T08:48:08Z","last_build_finished_at":"2013-04-20T08:48:22Z"},{"id":552207,"slug":"nakagami/pyfirebirdsql","description":"Python
+        DBAPI module for FirebirdSQL","last_build_id":6490150,"last_build_number":"21","last_build_state":"passed","last_build_duration":112,"last_build_language":null,"last_build_started_at":"2013-04-20T08:48:01Z","last_build_finished_at":"2013-04-20T08:52:23Z"},{"id":43092,"slug":"kashiwasan/opTimelinePlugin","description":"OpenPNE3\u306e\u30a2\u30af\u30c6\u30a3\u30d3\u30c6\u30a3\u3092\u3055\u3089\u306b\u4fbf\u5229\u306b\u4f7f\u3046\u305f\u3081\u306e\u30d7\u30e9\u30b0\u30a4\u30f3\u3067\u3059\u3002","last_build_id":6490148,"last_build_number":"111","last_build_state":"passed","last_build_duration":13,"last_build_language":null,"last_build_started_at":"2013-04-20T08:46:43Z","last_build_finished_at":"2013-04-20T08:46:56Z"}]}'
+    http_version: 
+  recorded_at: Sat, 20 Apr 2013 09:00:10 GMT
+recorded_with: VCR 2.4.0

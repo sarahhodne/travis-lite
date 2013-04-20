@@ -1,7 +1,8 @@
+require 'spec_helper'
 require 'travis/lite/application'
 require 'rack/test'
 
-describe Travis::Lite::Application, 'GET /', integration: true do
+describe Travis::Lite::Application, 'GET /', :integration, :vcr do
   include Rack::Test::Methods
 
   def app

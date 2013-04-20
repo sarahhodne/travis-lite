@@ -20,6 +20,8 @@ gem 'newrelic_rpm'
 group :test do
   gem 'rspec', '~> 2.12'
   gem 'rack-test', '~> 0.6', require: 'rack/test'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

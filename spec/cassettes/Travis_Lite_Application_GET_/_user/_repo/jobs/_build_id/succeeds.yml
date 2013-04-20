@@ -1,0 +1,1001 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.travis-ci.org/repos/henrikhodne/travis-lite
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.travis-ci.2+json, */*; q=0.01
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      user-agent:
+      - Ruby
+      connection:
+      - keep-alive
+      keep-alive:
+      - 30
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Type, Cache-Control, Expires, Etag, Last-Modified
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      etag:
+      - '"855b6e37f68ec34b121fcf0ea477e2a2"'
+      strict-transport-security:
+      - max-age=31536000
+      vary:
+      - Accept,Accept-Encoding
+      x-accepted-oauth-scopes:
+      - public
+      x-oauth-scopes:
+      - public
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"repo":{"id":358872,"slug":"henrikhodne/travis-lite","description":"Travis
+        CI without the JavaScript","last_build_id":6489681,"last_build_number":"47","last_build_state":"failed","last_build_duration":163,"last_build_language":null,"last_build_started_at":"2013-04-20T08:06:59Z","last_build_finished_at":"2013-04-20T08:08:44Z"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 20 Apr 2013 08:56:38 GMT
+- request:
+    method: get
+    uri: https://api.travis-ci.org/jobs/6488909
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.travis-ci.2+json, */*; q=0.01
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      user-agent:
+      - Ruby
+      connection:
+      - keep-alive
+      keep-alive:
+      - 30
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Type, Cache-Control, Expires, Etag, Last-Modified
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      etag:
+      - '"e415eeb82335d21677722da3e05e316f"'
+      strict-transport-security:
+      - max-age=31536000
+      vary:
+      - Accept,Accept-Encoding
+      x-accepted-oauth-scopes:
+      - public
+      x-oauth-scopes:
+      - public
+      content-length:
+      - '481'
+      connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"job":{"id":6488909,"repository_id":358872,"repository_slug":"henrikhodne/travis-lite","build_id":6488908,"commit_id":1917104,"log_id":1320887,"number":"45.1","config":{"language":"ruby","rvm":"1.9.3","env":"HEROKU_API_KEY=[secure]","after_success":"script/deploy",".result":"configured"},"state":"passed","started_at":"2013-04-20T06:52:03Z","finished_at":"2013-04-20T06:54:10Z","queue":"builds.linux","allow_failure":false,"tags":""},"commit":{"id":1917104,"sha":"8e4ac05b900db932ed420c4cf4f5ff9cc344dd4a","branch":"master","message":"Update
+        Gemfile","committed_at":"2013-04-20T06:51:31Z","author_name":"Henrik Hodne","author_email":"me@henrikhodne.com","committer_name":"Henrik
+        Hodne","committer_email":"me@henrikhodne.com","compare_url":"https://github.com/henrikhodne/travis-lite/compare/fba693a83e49...8e4ac05b900d"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 20 Apr 2013 08:56:38 GMT
+- request:
+    method: get
+    uri: https://api.travis-ci.org/logs/1320887
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      accept:
+      - application/vnd.travis-ci.2+json, */*; q=0.01
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      user-agent:
+      - Ruby
+      connection:
+      - keep-alive
+      keep-alive:
+      - 30
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Type, Cache-Control, Expires, Etag, Last-Modified
+      cache-control:
+      - no-cache
+      content-encoding:
+      - gzip
+      content-type:
+      - application/json;charset=utf-8
+      strict-transport-security:
+      - max-age=31536000
+      vary:
+      - Accept,Accept-Encoding
+      x-accepted-oauth-scopes:
+      - public
+      x-oauth-scopes:
+      - public
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"log":{"id":1320887,"job_id":6488909,"type":"Log","body":"Using worker:
+        worker-linux-6-2.bb.travis-ci.org:travis-linux-9\n\n$ export HEROKU_API_KEY=[secure]\r\ntravis_fold:start:git.1\r$
+        git clone --depth=50 --branch=\"master\" git://github.com/henrikhodne/travis-lite.git
+        henrikhodne/travis-lite\r\nCloning into ''henrikhodne/travis-lite''...\r\nremote:
+        Counting objects: 532, done.\u001B[K\r\nremote: Compressing objects:   0%
+        (1/234)   \u001B[K\rremote: Compressing objects:   1% (3/234)   \u001B[K\rremote:
+        Compressing objects:   2% (5/234)   \u001B[K\rremote: Compressing objects:   3%
+        (8/234)   \u001B[K\rremote: Compressing objects:   4% (10/234)   \u001B[K\rremote:
+        Compressing objects:   5% (12/234)   \u001B[K\rremote: Compressing objects:   6%
+        (15/234)   \u001B[K\rremote: Compressing objects:   7% (17/234)   \u001B[K\rremote:
+        Compressing objects:   8% (19/234)   \u001B[K\rremote: Compressing objects:   9%
+        (22/234)   \u001B[K\rremote: Compressing objects:  10% (24/234)   \u001B[K\rremote:
+        Compressing objects:  11% (26/234)   \u001B[K\rremote: Compressing objects:  12%
+        (29/234)   \u001B[K\rremote: Compressing objects:  13% (31/234)   \u001B[K\rremote:
+        Compressing objects:  14% (33/234)   \u001B[K\rremote: Compressing objects:  15%
+        (36/234)   \u001B[K\rremote: Compressing objects:  16% (38/234)   \u001B[K\rremote:
+        Compressing objects:  17% (40/234)   \u001B[K\rremote: Compressing objects:  18%
+        (43/234)   \u001B[K\rremote: Compressing objects:  19% (45/234)   \u001B[K\rremote:
+        Compressing objects:  20% (47/234)   \u001B[K\rremote: Compressing objects:  21%
+        (50/234)   \u001B[K\rremote: Compressing objects:  22% (52/234)   \u001B[K\rremote:
+        Compressing objects:  23% (54/234)   \u001B[K\rremote: Compressing objects:  24%
+        (57/234)   \u001B[K\rremote: Compressing objects:  25% (59/234)   \u001B[K\rremote:
+        Compressing objects:  26% (61/234)   \u001B[K\rremote: Compressing objects:  27%
+        (64/234)   \u001B[K\rremote: Compressing objects:  28% (66/234)   \u001B[K\rremote:
+        Compressing objects:  29% (68/234)   \u001B[K\rremote: Compressing objects:  30%
+        (71/234)   \u001B[K\rremote: Compressing objects:  31% (73/234)   \u001B[K\rremote:
+        Compressing objects:  32% (75/234)   \u001B[K\rremote: Compressing objects:  33%
+        (78/234)   \u001B[K\rremote: Compressing objects:  34% (80/234)   \u001B[K\rremote:
+        Compressing objects:  35% (82/234)   \u001B[K\rremote: Compressing objects:  36%
+        (85/234)   \u001B[K\rremote: Compressing objects:  37% (87/234)   \u001B[K\rremote:
+        Compressing objects:  38% (89/234)   \u001B[K\rremote: Compressing objects:  39%
+        (92/234)   \u001B[K\rremote: Compressing objects:  40% (94/234)   \u001B[K\rremote:
+        Compressing objects:  41% (96/234)   \u001B[K\rremote: Compressing objects:  42%
+        (99/234)   \u001B[K\rremote: Compressing objects:  43% (101/234)   \u001B[K\rremote:
+        Compressing objects:  44% (103/234)   \u001B[K\rremote: Compressing objects:  45%
+        (106/234)   \u001B[K\rremote: Compressing objects:  46% (108/234)   \u001B[K\rremote:
+        Compressing objects:  47% (110/234)   \u001B[K\rremote: Compressing objects:  48%
+        (113/234)   \u001B[K\rremote: Compressing objects:  49% (115/234)   \u001B[K\rremote:
+        Compressing objects:  50% (117/234)   \u001B[K\rremote: Compressing objects:  51%
+        (120/234)   \u001B[K\rremote: Compressing objects:  52% (122/234)   \u001B[K\rremote:
+        Compressing objects:  53% (125/234)   \u001B[K\rremote: Compressing objects:  54%
+        (127/234)   \u001B[K\rremote: Compressing objects:  55% (129/234)   \u001B[K\rremote:
+        Compressing objects:  56% (132/234)   \u001B[K\rremote: Compressing objects:  57%
+        (134/234)   \u001B[K\rremote: Compressing objects:  58% (136/234)   \u001B[K\rremote:
+        Compressing objects:  59% (139/234)   \u001B[K\rremote: Compressing objects:  60%
+        (141/234)   \u001B[K\rremote: Compressing objects:  61% (143/234)   \u001B[K\rremote:
+        Compressing objects:  62% (146/234)   \u001B[K\rremote: Compressing objects:  63%
+        (148/234)   \u001B[K\rremote: Compressing objects:  64% (150/234)   \u001B[K\rremote:
+        Compressing objects:  65% (153/234)   \u001B[K\rremote: Compressing objects:  66%
+        (155/234)   \u001B[K\rremote: Compressing objects:  67% (157/234)   \u001B[K\rremote:
+        Compressing objects:  68% (160/234)   \u001B[K\rremote: Compressing objects:  69%
+        (162/234)   \u001B[K\rremote: Compressing objects:  70% (164/234)   \u001B[K\rremote:
+        Compressing objects:  71% (167/234)   \u001B[K\rremote: Compressing objects:  72%
+        (169/234)   \u001B[K\rremote: Compressing objects:  73% (171/234)   \u001B[K\rremote:
+        Compressing objects:  74% (174/234)   \u001B[K\rremote: Compressing objects:  75%
+        (176/234)   \u001B[K\rremote: Compressing objects:  76% (178/234)   \u001B[K\rremote:
+        Compressing objects:  77% (181/234)   \u001B[K\rremote: Compressing objects:  78%
+        (183/234)   \u001B[K\rremote: Compressing objects:  79% (185/234)   \u001B[K\rremote:
+        Compressing objects:  80% (188/234)   \u001B[K\rremote: Compressing objects:  81%
+        (190/234)   \u001B[K\rremote: Compressing objects:  82% (192/234)   \u001B[K\rremote:
+        Compressing objects:  83% (195/234)   \u001B[K\rremote: Compressing objects:  84%
+        (197/234)   \u001B[K\rremote: Compressing objects:  85% (199/234)   \u001B[K\rremote:
+        Compressing objects:  86% (202/234)   \u001B[K\rremote: Compressing objects:  87%
+        (204/234)   \u001B[K\rremote: Compressing objects:  88% (206/234)   \u001B[K\rremote:
+        Compressing objects:  89% (209/234)   \u001B[K\rremote: Compressing objects:  90%
+        (211/234)   \u001B[K\rremote: Compressing objects:  91% (213/234)   \u001B[K\rremote:
+        Compressing objects:  92% (216/234)   \u001B[K\rremote: Compressing objects:  93%
+        (218/234)   \u001B[K\rremote: Compressing objects:  94% (220/234)   \u001B[K\rremote:
+        Compressing objects:  95% (223/234)   \u001B[K\rremote: Compressing objects:  96%
+        (225/234)   \u001B[K\rremote: Compressing objects:  97% (227/234)   \u001B[K\rremote:
+        Compressing objects:  98% (230/234)   \u001B[K\rremote: Compressing objects:  99%
+        (232/234)   \u001B[K\rremote: Compressing objects: 100% (234/234)   \u001B[K\rremote:
+        Compressing objects: 100% (234/234), done.\u001B[K\r\nReceiving objects:   0%
+        (1/532)   \rReceiving objects:   1% (6/532)   \rReceiving objects:   2% (11/532)   \rReceiving
+        objects:   3% (16/532)   \rReceiving objects:   4% (22/532)   \rReceiving
+        objects:   5% (27/532)   \rReceiving objects:   6% (32/532)   \rReceiving
+        objects:   7% (38/532)   \rReceiving objects:   8% (43/532)   \rReceiving
+        objects:   9% (48/532)   \rReceiving objects:  10% (54/532)   \rReceiving
+        objects:  11% (59/532)   \rReceiving objects:  12% (64/532)   \rReceiving
+        objects:  13% (70/532)   \rReceiving objects:  14% (75/532)   \rReceiving
+        objects:  15% (80/532)   \rReceiving objects:  16% (86/532)   \rReceiving
+        objects:  17% (91/532)   \rReceiving objects:  18% (96/532)   \rReceiving
+        objects:  19% (102/532)   \rReceiving objects:  20% (107/532)   \rReceiving
+        objects:  21% (112/532)   \rReceiving objects:  22% (118/532)   \rReceiving
+        objects:  23% (123/532)   \rReceiving objects:  24% (128/532)   \rReceiving
+        objects:  25% (133/532)   \rReceiving objects:  26% (139/532)   \rReceiving
+        objects:  27% (144/532)   \rReceiving objects:  28% (149/532)   \rReceiving
+        objects:  29% (155/532)   \rReceiving objects:  30% (160/532)   \rReceiving
+        objects:  31% (165/532)   \rReceiving objects:  32% (171/532)   \rReceiving
+        objects:  33% (176/532)   \rReceiving objects:  34% (181/532)   \rReceiving
+        objects:  35% (187/532)   \rReceiving objects:  36% (192/532)   \rReceiving
+        objects:  37% (197/532)   \rReceiving objects:  38% (203/532)   \rReceiving
+        objects:  39% (208/532)   \rReceiving objects:  40% (213/532)   \rReceiving
+        objects:  41% (219/532)   \rReceiving objects:  42% (224/532)   \rReceiving
+        objects:  43% (229/532)   \rReceiving objects:  44% (235/532)   \rReceiving
+        objects:  45% (240/532)   \rReceiving objects:  46% (245/532)   \rReceiving
+        objects:  47% (251/532)   \rReceiving objects:  48% (256/532)   \rReceiving
+        objects:  49% (261/532)   \rReceiving objects:  50% (266/532)   \rReceiving
+        objects:  51% (272/532)   \rReceiving objects:  52% (277/532)   \rReceiving
+        objects:  53% (282/532)   \rReceiving objects:  54% (288/532)   \rReceiving
+        objects:  55% (293/532)   \rReceiving objects:  56% (298/532)   \rReceiving
+        objects:  57% (304/532)   \rReceiving objects:  58% (309/532)   \rReceiving
+        objects:  59% (314/532)   \rReceiving objects:  60% (320/532)   \rReceiving
+        objects:  61% (325/532)   \rReceiving objects:  62% (330/532)   \rReceiving
+        objects:  63% (336/532)   \rReceiving objects:  64% (341/532)   \rReceiving
+        objects:  65% (346/532)   \rReceiving objects:  66% (352/532)   \rReceiving
+        objects:  67% (357/532)   \rReceiving objects:  68% (362/532)   \rReceiving
+        objects:  69% (368/532)   \rReceiving objects:  70% (373/532)   \rReceiving
+        objects:  71% (378/532)   \rReceiving objects:  72% (384/532)   \rReceiving
+        objects:  73% (389/532)   \rReceiving objects:  74% (394/532)   \rReceiving
+        objects:  75% (399/532)   \rReceiving objects:  76% (405/532)   \rReceiving
+        objects:  77% (410/532)   \rReceiving objects:  78% (415/532)   \rReceiving
+        objects:  79% (421/532)   \rReceiving objects:  80% (426/532)   \rReceiving
+        objects:  81% (431/532)   \rReceiving objects:  82% (437/532)   \rReceiving
+        objects:  83% (442/532)   \rReceiving objects:  84% (447/532)   \rReceiving
+        objects:  85% (453/532)   \rReceiving objects:  86% (458/532)   \rReceiving
+        objects:  87% (463/532)   \rReceiving objects:  88% (469/532)   \rReceiving
+        objects:  89% (474/532)   \rReceiving objects:  90% (479/532)   \rReceiving
+        objects:  91% (485/532)   \rReceiving objects:  92% (490/532)   \rReceiving
+        objects:  93% (495/532)   \rReceiving objects:  94% (501/532)   \rReceiving
+        objects:  95% (506/532)   \rReceiving objects:  96% (511/532)   \rReceiving
+        objects:  97% (517/532)   \rReceiving objects:  98% (522/532)   \rReceiving
+        objects:  99% (527/532)   \rremote: Total 532 (delta 214), reused 513 (delta
+        197)\u001B[K\r\nReceiving objects: 100% (532/532)   \rReceiving objects: 100%
+        (532/532), 288.17 KiB, done.\r\nResolving deltas:   0% (0/214)   \rResolving
+        deltas:  10% (23/214)   \rResolving deltas:  14% (30/214)   \rResolving deltas:  16%
+        (35/214)   \rResolving deltas:  17% (38/214)   \rResolving deltas:  18% (40/214)   \rResolving
+        deltas:  19% (41/214)   \rResolving deltas:  21% (46/214)   \rResolving deltas:  22%
+        (49/214)   \rResolving deltas:  26% (56/214)   \rResolving deltas:  28% (61/214)   \rResolving
+        deltas:  33% (71/214)   \rResolving deltas:  35% (77/214)   \rResolving deltas:  38%
+        (83/214)   \rResolving deltas:  40% (86/214)   \rResolving deltas:  44% (95/214)   \rResolving
+        deltas:  45% (97/214)   \rResolving deltas:  46% (99/214)   \rResolving deltas:  50%
+        (107/214)   \rResolving deltas:  51% (110/214)   \rResolving deltas:  52%
+        (113/214)   \rResolving deltas:  53% (115/214)   \rResolving deltas:  56%
+        (120/214)   \rResolving deltas:  58% (125/214)   \rResolving deltas:  59%
+        (127/214)   \rResolving deltas:  61% (132/214)   \rResolving deltas:  63%
+        (135/214)   \rResolving deltas:  64% (137/214)   \rResolving deltas:  65%
+        (140/214)   \rResolving deltas:  66% (142/214)   \rResolving deltas:  69%
+        (149/214)   \rResolving deltas:  70% (150/214)   \rResolving deltas:  74%
+        (159/214)   \rResolving deltas:  75% (161/214)   \rResolving deltas:  77%
+        (166/214)   \rResolving deltas:  82% (176/214)   \rResolving deltas:  84%
+        (180/214)   \rResolving deltas:  85% (184/214)   \rResolving deltas:  87%
+        (187/214)   \rResolving deltas:  88% (189/214)   \rResolving deltas:  89%
+        (192/214)   \rResolving deltas:  92% (198/214)   \rResolving deltas:  93%
+        (200/214)   \rResolving deltas:  94% (203/214)   \rResolving deltas:  95%
+        (205/214)   \rResolving deltas:  96% (206/214)   \rResolving deltas:  97%
+        (208/214)   \rResolving deltas:  98% (210/214)   \rResolving deltas:  99%
+        (212/214)   \rResolving deltas: 100% (214/214)   \rResolving deltas: 100%
+        (214/214), done.\r\ntravis_fold:end:git.1\r$ cd henrikhodne/travis-lite\r\ntravis_fold:start:git.2\r$
+        git checkout -qf 8e4ac05b900db932ed420c4cf4f5ff9cc344dd4a\r\ntravis_fold:end:git.2\r$
+        rvm use 1.9.3 --install --binary --fuzzy\r\n\u001B[32mUsing /home/travis/.rvm/gems/ruby-1.9.3-p327\u001B(B\u001B[m\r\n$
+        export BUNDLE_GEMFILE=$PWD/Gemfile\r\n$ ruby --version\r\nruby 1.9.3p327 (2012-11-10
+        revision 37606) [x86_64-linux]\r\n$ rvm --version\r\n\r\nrvm 1.19.0 (latest-1.19)
+        by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com>
+        [https://rvm.io/]\r\n\r\n$ gem --version\r\n2.0.3\r\ntravis_fold:start:install\r$
+        bundle install \r\nFetching gem metadata from https://rubygems.org/.......\r\nFetching
+        gem metadata from https://rubygems.org/..\r\nInstalling rake (10.0.2) \r\nInstalling
+        coderay (1.0.8) \r\nInstalling diff-lcs (1.1.3) \r\nInstalling multipart-post
+        (1.1.5) \r\nInstalling faraday (0.8.4) \r\nInstalling faraday_middleware (0.9.0)
+        \r\nInstalling thor (0.14.6) \r\nInstalling foreman (0.60.2) \r\nInstalling
+        json (1.7.5) \r\nInstalling kgio (2.7.4) \r\nInstalling listen (0.5.3) \r\nInstalling
+        method_source (0.8.1) \r\nInstalling mustache (0.99.4) \r\nInstalling newrelic_rpm
+        (3.4.2.1) \r\nInstalling slop (3.3.3) \r\nInstalling pry (0.9.10) \r\nInstalling
+        rack (1.4.1) \r\nInstalling rack-protection (1.2.0) \r\nInstalling rack-test
+        (0.6.2) \r\nInstalling raindrops (0.10.0) \r\nInstalling rerun (0.7.1) \r\nInstalling
+        rspec-core (2.12.1) \r\nInstalling rspec-expectations (2.12.0) \r\nInstalling
+        rspec-mocks (2.12.0) \r\nInstalling rspec (2.12.0) \r\nInstalling sass (3.2.3)
+        \r\nInstalling tilt (1.3.3) \r\nInstalling sinatra (1.3.3) \r\nInstalling
+        unicorn (4.4.0) \r\nUsing bundler (1.3.4) \r\n\u001B[32mYour bundle is complete!\u001B[0m\r\n\u001B[32mUse
+        `bundle show [gemname]` to see where a bundled gem is installed.\u001B[0m\r\n\u001B[32mPost-install
+        message from newrelic_rpm:\u001B[0m\r\n\r\nPLEASE NOTE:\r\n\r\nDeveloper Mode
+        is now a Rack middleware.\r\n\r\nDeveloper Mode is no longer available in
+        Rails 2.1 and earlier.\r\nHowever, starting in version 2.12 you can use Developer
+        Mode in any\r\nRack based framework, in addition to Rails.  To install developer
+        mode\r\nin a non-Rails application, just add NewRelic::Rack::DeveloperMode
+        to\r\nyour middleware stack.\r\n\r\nIf you are using JRuby, we recommend using
+        at least version 1.4 or \r\nlater because of issues with the implementation
+        of the timeout library.\r\n\r\nRefer to the README.md file for more information.\r\n\r\nPlease
+        see http://github.com/newrelic/rpm/blob/master/CHANGELOG\r\nfor a complete
+        description of the features and enhancements available\r\nin version 3.4 of
+        the Ruby Agent.\r\n  \r\ntravis_fold:end:install\r$ bundle exec rake\r\n/home/travis/.rvm/rubies/ruby-1.9.3-p327/bin/ruby
+        -S rspec ./spec/travis/lite/application/build_spec.rb ./spec/travis/lite/application/job_spec.rb
+        ./spec/travis/lite/application/latest_build_spec.rb ./spec/travis/lite/application/user_repo_spec.rb
+        ./spec/travis/lite/application/user_spec.rb ./spec/travis/lite/models/build_fetcher/fetch_build_for_slug_spec.rb
+        ./spec/travis/lite/models/build_fetcher/fetch_recent_for_slug_spec.rb ./spec/travis/lite/models/job_fetcher/fetch_job_spec.rb
+        ./spec/travis/lite/models/repository_fetcher/fetch_recent_spec.rb ./spec/travis/lite/models/repository_fetcher/fetch_with_owner_name_spec.rb
+        ./spec/travis/lite/models/repository_fetcher/fetch_with_slug_spec.rb --tag
+        ~integration\r\nRun options: exclude {:integration=>true}\r\n\r\nTravis::Lite::Models::BuildFetcher#fetch_build_for_slug\r\n\u001B[32m  should
+        call the api\u001B[0m\r\n\u001B[32m  should convert the result to Build object\u001B[0m\r\n\r\nTravis::Lite::Models::BuildFetcher#fetch_recent_for_slug\r\n\u001B[32m  should
+        call the api\u001B[0m\r\n\u001B[32m  should have 10 items\u001B[0m\r\n\u001B[32m  should
+        convert the result to Build objects\u001B[0m\r\n\r\nTravis::Lite::Models::JobFetcher#fetch_job\r\n\u001B[32m  should
+        call the api\u001B[0m\r\n\u001B[32m  should convert the result to Job object\u001B[0m\r\n\r\nTravis::Lite::Models::RepositoryFetcher#fetch_recent\r\n\u001B[32m  should
+        call the api\u001B[0m\r\n\u001B[32m  should have 10 items\u001B[0m\r\n\r\nTravis::Lite::Models::RepositoryFetcher#fetch_with_owner_name\r\n\u001B[32m  should
+        call the api\u001B[0m\r\n\u001B[32m  should have 10 items\u001B[0m\r\n\u001B[32m  should
+        convert the result to Repository objects\u001B[0m\r\n\r\nTravis::Lite::Models::RepositoryFetcher#fetch_with_slug\r\n\u001B[32m  should
+        call the api\u001B[0m\r\n\u001B[32m  should be a kind of Travis::Lite::Models::Repository\u001B[0m\r\n\r\nFinished
+        in 0.00783 seconds\r\n\u001B[32m14 examples, 0 failures\u001B[0m\r\n/home/travis/.rvm/rubies/ruby-1.9.3-p327/bin/ruby
+        -S rspec ./spec/travis/lite/application/build_spec.rb ./spec/travis/lite/application/job_spec.rb
+        ./spec/travis/lite/application/latest_build_spec.rb ./spec/travis/lite/application/user_repo_spec.rb
+        ./spec/travis/lite/application/user_spec.rb ./spec/travis/lite/models/build_fetcher/fetch_build_for_slug_spec.rb
+        ./spec/travis/lite/models/build_fetcher/fetch_recent_for_slug_spec.rb ./spec/travis/lite/models/job_fetcher/fetch_job_spec.rb
+        ./spec/travis/lite/models/repository_fetcher/fetch_recent_spec.rb ./spec/travis/lite/models/repository_fetcher/fetch_with_owner_name_spec.rb
+        ./spec/travis/lite/models/repository_fetcher/fetch_with_slug_spec.rb --tag
+        integration\r\nRun options: include {:integration=>true}\r\n\r\nTravis::Lite::Application
+        GET /:user/:repo/builds/:build_id\r\n\u001B[32m  succeeds\u001B[0m\r\n\r\nTravis::Lite::Application
+        GET /:user/:repo/jobs/:build_id\r\n\u001B[32m  succeeds\u001B[0m\r\n\r\nTravis::Lite::Application
+        GET /\r\n\u001B[32m  succeeds\u001B[0m\r\n\r\nTravis::Lite::Application GET
+        /:user/:repo\r\n\u001B[32m  succeeds\u001B[0m\r\n\r\nTravis::Lite::Application
+        GET /:user\r\n\u001B[32m  succeeds\u001B[0m\r\n\r\nFinished in 2.24 seconds\r\n\u001B[32m5
+        examples, 0 failures\u001B[0m\r\n\r\nThe command \"bundle exec rake\" exited
+        with 0.\r\ntravis_fold:start:after_success\r$ script/deploy\r\nThis script
+        requires superuser access to install apt packages.\r\nYou will be prompted
+        for your password by sudo.\r\n--2013-04-20 06:52:43--  https://toolbelt.heroku.com/apt/release.key\r\nResolving
+        toolbelt.heroku.com (toolbelt.heroku.com)... 107.21.106.77, 50.16.215.20,
+        107.21.105.64, ...\r\nConnecting to toolbelt.heroku.com (toolbelt.heroku.com)|107.21.106.77|:443...
+        connected.\r\nHTTP request sent, awaiting response... 200 OK\r\nLength: 1737
+        (1.7K) [application/octet-stream]\r\nSaving to: `STDOUT''\r\n\r\n\r 0% [                                       ]
+        0           --.-K/s              \r100%[======================================>]
+        1,737       --.-K/s   in 0s      \r\n\r\n2013-04-20 06:52:43 (1.01 GB/s) -
+        written to stdout [1737/1737]\r\n\r\nOK\r\n\r\r0% [Working]\r            \rGet:1
+        http://downloads-distro.mongodb.org dist Release.gpg [490 B]\r\n\r            \r98%
+        [Connecting to us.archive.ubuntu.com (91.189.91.13)] [Waiting for headers]
+        \r98% [Connecting to us.archive.ubuntu.com (91.189.91.13)] [Waiting for headers]
+        \r                                                                               \rGet:2
+        http://downloads-distro.mongodb.org dist Release [2,032 B]\r\n\r100% [Connecting
+        to us.archive.ubuntu.com (91.189.91.13)] [Waiting for headers]\r100% [Connecting
+        to us.archive.ubuntu.com (91.189.91.13)] [Waiting for headers]\r100% [2 Release
+        gpgv 2,032 B] [Connecting to us.archive.ubuntu.com (91.189.91.1\r99% [Waiting
+        for headers] [Waiting for headers] [Connecting to ppa.launchpad.ne\r                                                                               \rGet:3
+        http://downloads-distro.mongodb.org dist/10gen amd64 Packages [5,602 B]\r\n\r81%
+        [Waiting for headers] [Waiting for headers] [Connecting to ppa.launchpad.ne\r100%
+        [Waiting for headers] [Waiting for headers] [Connecting to ppa.launchpad.n\r100%
+        [3 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Connect\r100%
+        [Waiting for headers] [Waiting for headers] [Connecting to ppa.launchpad.n\r                                                                               \rGet:4
+        http://downloads-distro.mongodb.org dist/10gen i386 Packages [5,618 B]\r\n\r89%
+        [Waiting for headers] [Waiting for headers] [Connecting to ppa.launchpad.ne\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise Release.gpg\r\n\r89% [Waiting for headers]
+        [Waiting for headers] [Connecting to ppa.launchpad.ne\r                                                                               \rGet:5
+        http://us.archive.ubuntu.com precise-updates Release.gpg [198 B]\r\n\r89%
+        [5 Release.gpg 198 B/198 B 100%] [Waiting for headers] [Connecting to ppa.l\r89%
+        [Waiting for headers] [Waiting for headers] [Connecting to ppa.launchpad.ne\r                                                                               \rGet:6
+        http://us.archive.ubuntu.com precise-backports Release.gpg [198 B]\r\n\r89%
+        [6 Release.gpg 198 B/198 B 100%] [Waiting for headers] [Connecting to ppa.l\r89%
+        [Waiting for headers] [Connecting to ppa.launchpad.net (91.189.95.83)] [Con\r100%
+        [Waiting for headers] [Waiting for headers] [Connecting to ppa.launchpad.n\r100%
+        [4 Packages gzip 0 B] [Waiting for headers] [Waiting for headers] [Connect\r100%
+        [Waiting for headers] [Waiting for headers] [Connecting to ppa.launchpad.n\r                                                                               \rIgn
+        http://downloads-distro.mongodb.org dist/10gen TranslationIndex\r\n\r100%
+        [Waiting for headers] [Waiting for headers] [Connecting to ppa.launchpad.n\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise Release\r\n\r100% [Waiting for headers]
+        [Connecting to ppa.launchpad.net (91.189.95.83)] [Co\r100% [Release gpgv 49.6
+        kB] [Waiting for headers] [Waiting for headers] [Connec\r100% [Waiting for
+        headers] [Waiting for headers] [Connecting to ppa.launchpad.n\r                                                                               \rGet:7
+        http://us.archive.ubuntu.com precise-updates Release [49.6 kB]\r\n\r40% [7
+        Release 11.2 kB/49.6 kB 23%] [Waiting for headers] [Connecting to ppa.la\r                                                                               \rIgn
+        http://downloads-distro.mongodb.org dist/10gen Translation-en_US\r\n\r44%
+        [7 Release 14.1 kB/49.6 kB 29%] [Waiting for headers] [Connecting to ppa.la\r                                                                               \rIgn
+        http://downloads-distro.mongodb.org dist/10gen Translation-en\r\n\r44% [7
+        Release 14.1 kB/49.6 kB 29%] [Waiting for headers] [Connecting to ppa.la\r                                                                               \rGet:8
+        http://security.ubuntu.com precise-security Release.gpg [198 B]\r\n\r72% [7
+        Release 31.5 kB/49.6 kB 64%] [8 Release.gpg 198 B/198 B 100%] [Waiting f\r72%
+        [7 Release 31.5 kB/49.6 kB 64%] [Waiting for headers] [Connecting to heroku\r100%
+        [Waiting for headers] [Waiting for headers] [Waiting for headers] [Connect\r                                                                               \rGet:9
+        http://us.archive.ubuntu.com precise-backports Release [49.6 kB]\r\n\r63%
+        [9 Release 7,652 B/49.6 kB 15%] [Waiting for headers] [Waiting for headers]\r63%
+        [7 Release gpgv 49.6 kB] [9 Release 7,652 B/49.6 kB 15%] [Waiting for heade\r63%
+        [9 Release 7,652 B/49.6 kB 15%] [Waiting for headers] [Waiting for headers]\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/main Sources\r\n\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/restricted Sources\r\n\r100% [Waiting
+        for headers] [Waiting for headers] [Waiting for headers] [Waiting\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/universe Sources\r\n\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/multiverse Sources\r\n\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/main amd64 Packages\r\n\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/restricted amd64 Packages\r\n\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/universe amd64 Packages\r\n\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/multiverse amd64 Packages\r\n\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/main i386 Packages\r\n\r100% [Waiting
+        for headers] [Waiting for headers] [Waiting for headers] [Waiting\r100% [9
+        Release gpgv 49.6 kB] [Waiting for headers] [Waiting for headers] [Wait\r100%
+        [Waiting for headers] [Waiting for headers] [Waiting for headers] [Waiting\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/restricted i386 Packages\r\n\r100% [Waiting
+        for headers] [Waiting for headers] [Waiting for headers] [Waiting\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/universe i386 Packages\r\n\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/multiverse i386 Packages\r\n\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/main TranslationIndex\r\n\r100% [Waiting
+        for headers] [Waiting for headers] [Waiting for headers] [Waiting\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/multiverse TranslationIndex\r\n\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/restricted TranslationIndex\r\n\r100%
+        [Waiting for headers] [Waiting for headers] [Waiting for headers] [Waiting\r                                                                               \rGet:10
+        http://toolbelt.heroku.com ./ Release.gpg [490 B]\r\n\r100% [Waiting for headers]
+        [Waiting for headers] [Waiting for headers] [10 Rele\r100% [Waiting for headers]
+        [Waiting for headers] [Waiting for headers] [Waiting\r                                                                               \rHit
+        http://www.rabbitmq.com testing Release.gpg\r\n\r100% [Waiting for headers]
+        [Waiting for headers] [Waiting for headers] [Connect\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/universe TranslationIndex\r\n\r100% [Waiting
+        for headers] [Waiting for headers] [Connecting to toolbelt.heroku\r                                                                               \rGet:11
+        http://us.archive.ubuntu.com precise-updates/main Sources [380 kB]\r\n\r23%
+        [11 Sources 0 B/380 kB 0%] [Waiting for headers] [Waiting for headers] [Con\r                                                                               \rHit
+        http://ppa.launchpad.net precise Release.gpg\r\n\r30% [11 Sources 35.8 kB/380
+        kB 9%] [Waiting for headers] [Waiting for headers] \r                                                                               \rGet:12
+        http://ppa.launchpad.net precise Release.gpg [316 B]\r\n\r30% [11 Sources
+        35.8 kB/380 kB 9%] [Waiting for headers] [12 Release.gpg 316 B/\r30% [11 Sources
+        35.8 kB/380 kB 9%] [Waiting for headers] [Connecting to toolbel\r                                                                               \rHit
+        http://ppa.launchpad.net precise Release.gpg\r\n\r30% [11 Sources 35.8 kB/380
+        kB 9%] [Waiting for headers] [Waiting for headers] \r                                                                               \rGet:13
+        http://security.ubuntu.com precise-security Release [49.6 kB]\r\n\r41% [11
+        Sources 95.2 kB/380 kB 25%] [13 Release 13.9 kB/49.6 kB 28%] [Waiting f\r                                                                               \rHit
+        http://www.rabbitmq.com testing Release\r\n\r91% [11 Sources 369 kB/380 kB
+        97%] [13 Release 13.9 kB/49.6 kB 28%] [Waiting fo\r91% [Release gpgv 8,031
+        B] [11 Sources 369 kB/380 kB 97%] [13 Release 13.9 kB/4\r93% [Release gpgv
+        8,031 B] [13 Release 13.9 kB/49.6 kB 28%] [Waiting for header\r                                                                               \rGet:14
+        http://us.archive.ubuntu.com precise-updates/restricted Sources [5,467 B]\r\n\r                                                                               \rGet:15
+        http://us.archive.ubuntu.com precise-updates/universe Sources [85.0 kB]\r\n\r94%
+        [15 Sources 84.5 kB/85.0 kB 99%] [13 Release 13.9 kB/49.6 kB 28%] [Waiting
+        \r94% [11 Sources bzip2 0 B] [15 Sources 84.5 kB/85.0 kB 99%] [13 Release
+        13.9 kB\r94% [11 Sources bzip2 0 B] [13 Release 13.9 kB/49.6 kB 28%] [Waiting
+        for header\r                                                                               \rGet:16
+        http://us.archive.ubuntu.com precise-updates/multiverse Sources [6,562 B]\r\n\r93%
+        [11 Sources bzip2 0 B] [16 Sources 0 B/6,562 B 0%] [13 Release 13.9 kB/49.6\r94%
+        [11 Sources bzip2 0 B] [13 Release 13.9 kB/49.6 kB 28%] [Waiting for header\r                                                                               \rGet:17
+        http://us.archive.ubuntu.com precise-updates/main amd64 Packages [601 kB]\r\n\r49%
+        [11 Sources bzip2 0 B] [17 Packages 5,939 B/601 kB 1%] [13 Release 13.9 kB/\r                                                                               \rGet:18
+        http://ppa.launchpad.net precise Release.gpg [316 B]\r\n\r54% [11 Sources
+        bzip2 0 B] [17 Packages 65.5 kB/601 kB 11%] [13 Release 13.9 kB\r54% [11 Sources
+        bzip2 0 B] [17 Packages 65.5 kB/601 kB 11%] [13 Release 13.9 kB\r                                                                               \rGet:19
+        http://ppa.launchpad.net precise Release.gpg [316 B]\r\n\r54% [11 Sources
+        bzip2 0 B] [17 Packages 71.5 kB/601 kB 12%] [13 Release 13.9 kB\r                                                                               \rHit
+        http://ppa.launchpad.net precise Release\r\n\r59% [11 Sources bzip2 0 B] [17
+        Packages 131 kB/601 kB 22%] [13 Release 13.9 kB/\r                                                                               \rGet:20
+        http://ppa.launchpad.net precise Release [11.9 kB]\r\n\r59% [11 Sources bzip2
+        0 B] [17 Packages 131 kB/601 kB 22%] [13 Release 13.9 kB/\r59% [11 Sources
+        bzip2 0 B] [Release gpgv 11.9 kB] [17 Packages 131 kB/601 kB 22\r61% [11 Sources
+        bzip2 0 B] [17 Packages 154 kB/601 kB 26%] [13 Release 13.9 kB/\r98% [11 Sources
+        bzip2 0 B] [Waiting for headers] [13 Release 35.3 kB/49.6 kB 71\r                                                                               \rGet:21
+        http://us.archive.ubuntu.com precise-updates/restricted amd64 Packages [10.1
+        kB]\r\n\r98% [11 Sources bzip2 0 B] [21 Packages 8,192 B/10.1 kB 81%] [13
+        Release 35.3 k\r98% [11 Sources bzip2 0 B] [13 Release 35.3 kB/49.6 kB 71%]
+        [20 Release 3,949 B\r                                                                               \rGet:22
+        http://us.archive.ubuntu.com precise-updates/universe amd64 Packages [194
+        kB]\r\n\r85% [11 Sources bzip2 0 B] [22 Packages 0 B/194 kB 0%] [13 Release
+        35.3 kB/49.6\r98% [11 Sources bzip2 0 B] [Waiting for headers] [13 Release
+        35.3 kB/49.6 kB 71\r                                                                               \rGet:23
+        http://us.archive.ubuntu.com precise-updates/multiverse amd64 Packages [13.6
+        kB]\r\n\r98% [11 Sources bzip2 0 B] [23 Packages 13.6 kB/13.6 kB 100%] [13
+        Release 35.3 \r98% [11 Sources bzip2 0 B] [13 Release 35.3 kB/49.6 kB 71%]
+        [20 Release 3,949 B\r                                                                               \rGet:24
+        http://us.archive.ubuntu.com precise-updates/main i386 Packages [612 kB]\r\n\r70%
+        [11 Sources bzip2 0 B] [24 Packages 16.4 kB/612 kB 3%] [13 Release 35.3 kB/\r                                                                               \rHit
+        http://www.rabbitmq.com testing/main amd64 Packages\r\n\r84% [11 Sources bzip2
+        0 B] [24 Packages 299 kB/612 kB 49%] [13 Release 35.3 kB/\r99% [11 Sources
+        bzip2 0 B] [Waiting for headers] [13 Release 35.3 kB/49.6 kB 71\r                                                                               \rGet:25
+        http://us.archive.ubuntu.com precise-updates/restricted i386 Packages [10.0
+        kB]\r\n\r98% [11 Sources bzip2 0 B] [25 Packages 0 B/10.0 kB 0%] [13 Release
+        35.3 kB/49.\r99% [11 Sources bzip2 0 B] [Waiting for headers] [13 Release
+        35.3 kB/49.6 kB 71\r                                                                               \rGet:26
+        http://us.archive.ubuntu.com precise-updates/universe i386 Packages [197 kB]\r\n\r91%
+        [11 Sources bzip2 0 B] [26 Packages 3,836 B/197 kB 2%] [13 Release 35.3 kB/\r99%
+        [11 Sources bzip2 0 B] [Waiting for headers] [13 Release 35.3 kB/49.6 kB 71\r                                                                               \rGet:27
+        http://us.archive.ubuntu.com precise-updates/multiverse i386 Packages [13.8
+        kB]\r\n\r99% [11 Sources bzip2 0 B] [27 Packages 13.8 kB/13.8 kB 100%] [13
+        Release 35.3 \r99% [11 Sources bzip2 0 B] [13 Release 35.3 kB/49.6 kB 71%]
+        [20 Release 3,949 B\r                                                                               \rGet:28
+        http://us.archive.ubuntu.com precise-updates/main TranslationIndex [3,564
+        B]\r\n\r99% [11 Sources bzip2 0 B] [28 TranslationIndex 3,564 B/3,564 B 100%]
+        [13 Relea\r99% [11 Sources bzip2 0 B] [13 Release 35.3 kB/49.6 kB 71%] [20
+        Release 3,949 B\r                                                                               \rGet:29
+        http://us.archive.ubuntu.com precise-updates/multiverse TranslationIndex [2,605
+        B]\r\n\r                                                                               \rGet:30
+        http://us.archive.ubuntu.com precise-updates/restricted TranslationIndex [2,461
+        B]\r\n\r                                                                               \rGet:31
+        http://us.archive.ubuntu.com precise-updates/universe TranslationIndex [2,850
+        B]\r\n\r99% [11 Sources bzip2 0 B] [31 TranslationIndex 2,850 B/2,850 B 100%]
+        [13 Relea\r                                                                               \rGet:32
+        http://us.archive.ubuntu.com precise-backports/main Sources [2,422 B]\r\n\r                                                                               \rGet:33
+        http://us.archive.ubuntu.com precise-backports/restricted Sources [14 B]\r\n\r99%
+        [11 Sources bzip2 0 B] [Waiting for headers] [13 Release 35.3 kB/49.6 kB 71\r                                                                               \rHit
+        http://ppa.launchpad.net precise Release\r\n\r99% [11 Sources bzip2 0 B] [Waiting
+        for headers] [13 Release 35.3 kB/49.6 kB 71\r99% [11 Sources bzip2 0 B] [20
+        Release gpgv 11.9 kB] [Waiting for headers] [13 \r99% [20 Release gpgv 11.9
+        kB] [Waiting for headers] [13 Release 35.3 kB/49.6 kB\r99% [Waiting for headers]
+        [13 Release 35.3 kB/49.6 kB 71%] [Waiting for headers\r99% [14 Sources bzip2
+        0 B] [Waiting for headers] [13 Release 35.3 kB/49.6 kB 71\r99% [14 Sources
+        bzip2 0 B] [Release gpgv 11.8 kB] [Waiting for headers] [13 Rel\r99% [14 Sources
+        bzip2 22.7 kB] [Waiting for headers] [13 Release 35.3 kB/49.6 k\r99% [Waiting
+        for headers] [13 Release 35.3 kB/49.6 kB 71%] [Waiting for headers\r99% [15
+        Sources bzip2 0 B] [Waiting for headers] [13 Release 35.3 kB/49.6 kB 71\r                                                                               \rGet:34
+        http://us.archive.ubuntu.com precise-backports/universe Sources [24.2 kB]\r\n\r99%
+        [15 Sources bzip2 0 B] [34 Sources 16.4 kB/24.2 kB 68%] [13 Release 35.3 kB\r100%
+        [15 Sources bzip2 0 B] [13 Release 42.5 kB/49.6 kB 86%] [Waiting for heade\r100%
+        [15 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers] [Connec\r100%
+        [15 Sources bzip2 0 B] [13 Release gpgv 49.6 kB] [Waiting for headers] [Wa\r100%
+        [15 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers] [Connec\r                                                                               \rGet:35
+        http://us.archive.ubuntu.com precise-backports/multiverse Sources [2,669 B]\r\n\r                                                                               \rGet:36
+        http://us.archive.ubuntu.com precise-backports/main amd64 Packages [1,945
+        B]\r\n\r100% [15 Sources bzip2 0 B] [36 Packages 1,945 B/1,945 B 100%] [Waiting
+        for hea\r100% [15 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]
+        [Connec\r                                                                               \rGet:37
+        http://us.archive.ubuntu.com precise-backports/restricted amd64 Packages [14
+        B]\r\n\r100% [15 Sources bzip2 0 B] [37 Packages 14 B/14 B 100%] [Waiting
+        for headers] \r100% [15 Sources bzip2 0 B] [Waiting for headers] [Waiting
+        for headers] [Waitin\r                                                                               \rGet:38
+        http://us.archive.ubuntu.com precise-backports/universe amd64 Packages [24.3
+        kB]\r\n\r99% [15 Sources bzip2 0 B] [38 Packages 8,239 B/24.3 kB 34%] [Waiting
+        for heade\r100% [15 Sources bzip2 0 B] [Waiting for headers] [Waiting for
+        headers] [Connec\r                                                                               \rGet:39
+        http://us.archive.ubuntu.com precise-backports/multiverse amd64 Packages [2,489
+        B]\r\n\r100% [15 Sources bzip2 0 B] [39 Packages 2,489 B/2,489 B 100%] [Waiting
+        for hea\r100% [15 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]
+        [Waitin\r                                                                               \rGet:40
+        http://us.archive.ubuntu.com precise-backports/main i386 Packages [1,941 B]\r\n\r100%
+        [15 Sources bzip2 0 B] [40 Packages 1,941 B/1,941 B 100%] [Waiting for hea\r100%
+        [15 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers] [Connec\r                                                                               \rGet:41
+        http://us.archive.ubuntu.com precise-backports/restricted i386 Packages [14
+        B]\r\n\r100% [15 Sources bzip2 0 B] [41 Packages 0 B/14 B 0%] [Waiting for
+        headers] [Wa\r100% [15 Sources bzip2 0 B] [Waiting for headers] [Waiting for
+        headers] [Connec\r                                                                               \rGet:42
+        http://us.archive.ubuntu.com precise-backports/universe i386 Packages [24.4
+        kB]\r\n\r100% [15 Sources bzip2 0 B] [42 Packages 20.5 kB/24.4 kB 84%] [Waiting
+        for head\r100% [15 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]
+        [Connec\r                                                                               \rGet:43
+        http://us.archive.ubuntu.com precise-backports/multiverse i386 Packages [2,504
+        B]\r\n\r100% [15 Sources bzip2 0 B] [43 Packages 2,504 B/2,504 B 100%] [Waiting
+        for hea\r100% [15 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]
+        [Connec\r100% [Waiting for headers] [Waiting for headers] [Waiting for headers]
+        [Connect\r100% [16 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers]
+        [Waitin\r                                                                               \rGet:44
+        http://us.archive.ubuntu.com precise-backports/main TranslationIndex [72 B]\r\n\r100%
+        [16 Sources bzip2 0 B] [44 TranslationIndex 0 B/72 B 0%] [Waiting for head\r100%
+        [16 Sources bzip2 0 B] [Waiting for headers] [Waiting for headers] [Connec\r                                                                               \rGet:45
+        http://us.archive.ubuntu.com precise-backports/multiverse TranslationIndex
+        [72 B]\r\n\r                                                                               \rGet:46
+        http://us.archive.ubuntu.com precise-backports/restricted TranslationIndex
+        [70 B]\r\n\r100% [16 Sources bzip2 0 B] [46 TranslationIndex 70 B/70 B 100%]
+        [Waiting for h\r                                                                               \rGet:47
+        http://us.archive.ubuntu.com precise-backports/universe TranslationIndex [73
+        B]\r\n\r100% [16 Sources bzip2 21.2 kB] [Waiting for headers] [Waiting for
+        headers] [Co\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/main Translation-en\r\n\r100% [Waiting
+        for headers] [Waiting for headers] [Waiting for headers] [Connect\r100% [17
+        Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [Waiti\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/multiverse Translation-en\r\n\r100% [17
+        Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [Waiti\r                                                                               \rGet:48
+        http://ppa.launchpad.net precise Release [11.9 kB]\r\n\r100% [17 Packages
+        bzip2 0 B] [Waiting for headers] [Waiting for headers] [48 Re\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/restricted Translation-en\r\n\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise/universe Translation-en\r\n\r100% [17
+        Packages bzip2 0 B] [Waiting for headers] [48 Release 3,949 B/11.9 kB \r                                                                               \rGet:49
+        http://us.archive.ubuntu.com precise-updates/main Translation-en [269 kB]\r\n\r90%
+        [17 Packages bzip2 0 B] [49 Translation-en 13.8 kB/269 kB 5%] [Waiting for
+        \r                                                                               \rHit
+        http://www.rabbitmq.com testing/main i386 Packages\r\n\r97% [17 Packages bzip2
+        0 B] [49 Translation-en 197 kB/269 kB 73%] [Waiting for \r                                                                               \rIgn
+        http://www.rabbitmq.com testing/main TranslationIndex\r\n\r97% [17 Packages
+        bzip2 0 B] [49 Translation-en 197 kB/269 kB 73%] [Waiting for \r100% [17 Packages
+        bzip2 0 B] [Waiting for headers] [Waiting for headers] [48 Re\r                                                                               \rGet:50
+        http://us.archive.ubuntu.com precise-updates/multiverse Translation-en [7,834
+        B]\r\n\r100% [17 Packages bzip2 0 B] [50 Translation-en 6,422 B/7,834 B 82%]
+        [Waiting f\r100% [17 Packages bzip2 0 B] [Waiting for headers] [Waiting for
+        headers] [48 Re\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise-updates/restricted Translation-en\r\n\r100%
+        [17 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [48 Re\r                                                                               \rGet:51
+        http://us.archive.ubuntu.com precise-updates/universe Translation-en [115
+        kB]\r\n\r96% [17 Packages bzip2 0 B] [51 Translation-en 24.6 kB/115 kB 21%]
+        [Waiting for\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise-backports/main Translation-en\r\n\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise-backports/multiverse Translation-en\r\n\r100%
+        [17 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [48 Re\r                                                                               \rHit
+        http://us.archive.ubuntu.com precise-backports/restricted Translation-en\r\n\r100%
+        [17 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [48 Re\r                                                                               \rGet:52
+        http://us.archive.ubuntu.com precise-backports/universe Translation-en [17.4
+        kB]\r\n\r100% [17 Packages bzip2 0 B] [52 Translation-en 13.3 kB/17.4 kB 77%]
+        [Waiting f\r100% [17 Packages bzip2 0 B] [Waiting for headers] [48 Release
+        3,949 B/11.9 kB \r100% [17 Packages bzip2 0 B] [Waiting for headers] [Waiting
+        for headers] [Conne\r100% [17 Packages bzip2 0 B] [48 Release gpgv 11.9 kB]
+        [Waiting for headers] [W\r100% [17 Packages bzip2 0 B] [Waiting for headers]
+        [Waiting for headers] [Conne\r                                                                               \rGet:53
+        http://security.ubuntu.com precise-security/main Sources [69.6 kB]\r\n\r98%
+        [17 Packages bzip2 0 B] [53 Sources 14.6 kB/69.6 kB 21%] [Waiting for heade\r                                                                               \rGet:54
+        http://ppa.launchpad.net precise Release [11.9 kB]\r\n\r98% [17 Packages bzip2
+        0 B] [53 Sources 28.2 kB/69.6 kB 40%] [54 Release 6,845 \r                                                                               \rHit
+        http://ppa.launchpad.net precise/main amd64 Packages\r\n\r                                                                               \rHit
+        http://ppa.launchpad.net precise/main i386 Packages\r\n\r99% [17 Packages
+        bzip2 0 B] [53 Sources 28.2 kB/69.6 kB 40%] [Waiting for heade\r                                                                               \rIgn
+        http://ppa.launchpad.net precise/main TranslationIndex\r\n\r99% [17 Packages
+        bzip2 0 B] [53 Sources 28.2 kB/69.6 kB 40%] [Waiting for heade\r99% [17 Packages
+        bzip2 0 B] [54 Release gpgv 11.9 kB] [53 Sources 28.2 kB/69.6 \r99% [17 Packages
+        bzip2 0 B] [53 Sources 28.2 kB/69.6 kB 40%] [Waiting for heade\r                                                                               \rGet:55
+        http://toolbelt.heroku.com ./ Release [1,673 B]\r\n\r100% [17 Packages bzip2
+        0 B] [53 Sources 63.9 kB/69.6 kB 92%] [Waiting for head\r100% [17 Packages
+        bzip2 0 B] [53 Sources 63.9 kB/69.6 kB 92%] [Waiting for head\r100% [17 Packages
+        bzip2 0 B] [55 Release gpgv 1,673 B] [53 Sources 63.9 kB/69.6\r100% [17 Packages
+        bzip2 0 B] [53 Sources 63.9 kB/69.6 kB 92%] [Waiting for head\r                                                                               \rGet:56
+        http://ppa.launchpad.net precise/main amd64 Packages [4,195 B]\r\n\r100% [17
+        Packages bzip2 0 B] [53 Sources 63.9 kB/69.6 kB 92%] [56 Packages 4,19\r100%
+        [17 Packages bzip2 0 B] [53 Sources 63.9 kB/69.6 kB 92%] [Connecting to to\r                                                                               \rGet:57
+        http://ppa.launchpad.net precise/main i386 Packages [4,183 B]\r\n\r100% [17
+        Packages bzip2 0 B] [53 Sources 63.9 kB/69.6 kB 92%] [57 Packages 4,18\r100%
+        [17 Packages bzip2 0 B] [53 Sources 63.9 kB/69.6 kB 92%] [Connecting to to\r                                                                               \rIgn
+        http://ppa.launchpad.net precise/main TranslationIndex\r\n\r100% [17 Packages
+        bzip2 0 B] [53 Sources 63.9 kB/69.6 kB 92%] [Connecting to to\r                                                                               \rHit
+        http://ppa.launchpad.net precise/main amd64 Packages\r\n\r100% [17 Packages
+        bzip2 0 B] [53 Sources 63.9 kB/69.6 kB 92%] [Connecting to to\r                                                                               \rHit
+        http://ppa.launchpad.net precise/main i386 Packages\r\n\r100% [17 Packages
+        bzip2 0 B] [53 Sources 63.9 kB/69.6 kB 92%] [Connecting to to\r100% [53 Sources
+        63.9 kB/69.6 kB 92%] [Waiting for headers] [Connecting to tool\r100% [21 Packages
+        bzip2 0 B] [53 Sources 63.9 kB/69.6 kB 92%] [Waiting for head\r100% [53 Sources
+        63.9 kB/69.6 kB 92%] [Waiting for headers] [Connecting to tool\r100% [22 Packages
+        bzip2 0 B] [53 Sources 63.9 kB/69.6 kB 92%] [Waiting for head\r                                                                               \rIgn
+        http://ppa.launchpad.net precise/main TranslationIndex\r\n\r100% [22 Packages
+        bzip2 0 B] [53 Sources 63.9 kB/69.6 kB 92%] [Waiting for head\r100% [22 Packages
+        bzip2 0 B] [Waiting for headers] [Connecting to toolbelt.hero\r100% [Waiting
+        for headers] [Waiting for headers] [Connecting to toolbelt.heroku\r100% [23
+        Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [Conne\r100%
+        [Waiting for headers] [Waiting for headers] [Connecting to toolbelt.heroku\r100%
+        [24 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [Conne\r                                                                               \rGet:58
+        http://ppa.launchpad.net precise/main amd64 Packages [1,456 B]\r\n\r100% [24
+        Packages bzip2 0 B] [Waiting for headers] [58 Packages 1,456 B/1,456 B\r100%
+        [24 Packages bzip2 0 B] [Waiting for headers] [Connecting to toolbelt.hero\r                                                                               \rGet:59
+        http://ppa.launchpad.net precise/main i386 Packages [1,080 B]\r\n\r100% [24
+        Packages bzip2 0 B] [Waiting for headers] [59 Packages 1,080 B/1,080 B\r100%
+        [24 Packages bzip2 0 B] [Waiting for headers] [Connecting to toolbelt.hero\r                                                                               \rIgn
+        http://ppa.launchpad.net precise/main TranslationIndex\r\n\r100% [24 Packages
+        bzip2 0 B] [Waiting for headers] [Connecting to toolbelt.hero\r                                                                               \rGet:60
+        http://ppa.launchpad.net precise/main amd64 Packages [2,506 B]\r\n\r100% [24
+        Packages bzip2 0 B] [Waiting for headers] [60 Packages 2,506 B/2,506 B\r100%
+        [24 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [Conne\r                                                                               \rGet:61
+        http://ppa.launchpad.net precise/main i386 Packages [2,506 B]\r\n\r100% [24
+        Packages bzip2 0 B] [Waiting for headers] [61 Packages 2,506 B/2,506 B\r100%
+        [24 Packages bzip2 0 B] [Waiting for headers] [Connecting to toolbelt.hero\r                                                                               \rIgn
+        http://ppa.launchpad.net precise/main TranslationIndex\r\n\r100% [24 Packages
+        bzip2 0 B] [Waiting for headers] [Connecting to toolbelt.hero\r                                                                               \rGet:62
+        http://security.ubuntu.com precise-security/restricted Sources [2,494 B]\r\n\r100%
+        [24 Packages bzip2 0 B] [62 Sources 0 B/2,494 B 0%] [Waiting for headers]
+        \r100% [24 Packages bzip2 0 B] [Waiting for headers] [Connecting to toolbelt.hero\r                                                                               \rGet:63
+        http://security.ubuntu.com precise-security/universe Sources [24.0 kB]\r\n\r99%
+        [24 Packages bzip2 0 B] [63 Sources 7,260 B/24.0 kB 30%] [Waiting for heade\r100%
+        [24 Packages bzip2 0 B] [Waiting for headers] [Connecting to toolbelt.hero\r                                                                               \rGet:64
+        http://security.ubuntu.com precise-security/multiverse Sources [1,389 B]\r\n\r100%
+        [24 Packages bzip2 0 B] [64 Sources 0 B/1,389 B 0%] [Waiting for headers]
+        \r100% [24 Packages bzip2 0 B] [Waiting for headers] [Connecting to toolbelt.hero\r                                                                               \rGet:65
+        http://security.ubuntu.com precise-security/main amd64 Packages [248 kB]\r\n\r93%
+        [24 Packages bzip2 0 B] [65 Packages 12.1 kB/248 kB 5%] [Waiting for header\r96%
+        [65 Packages 115 kB/248 kB 46%] [Waiting for headers] [Waiting for headers]\r96%
+        [25 Packages bzip2 0 B] [65 Packages 115 kB/248 kB 46%] [Waiting for header\r96%
+        [65 Packages 115 kB/248 kB 46%] [Waiting for headers] [Waiting for headers]\r96%
+        [26 Packages bzip2 0 B] [65 Packages 115 kB/248 kB 46%] [Waiting for header\r98%
+        [65 Packages 178 kB/248 kB 72%] [Waiting for headers] [Waiting for headers]\r98%
+        [27 Packages bzip2 0 B] [65 Packages 178 kB/248 kB 72%] [Waiting for header\r98%
+        [65 Packages 178 kB/248 kB 72%] [Waiting for headers] [Waiting for headers]\r98%
+        [32 Sources bzip2 0 B] [65 Packages 178 kB/248 kB 72%] [Waiting for headers\r98%
+        [65 Packages 178 kB/248 kB 72%] [Waiting for headers] [Waiting for headers]\r98%
+        [33 Sources bzip2 0 B] [65 Packages 178 kB/248 kB 72%] [Waiting for headers\r98%
+        [65 Packages 178 kB/248 kB 72%] [Waiting for headers] [Waiting for headers]\r98%
+        [34 Sources bzip2 0 B] [65 Packages 178 kB/248 kB 72%] [Waiting for headers\r98%
+        [65 Packages 178 kB/248 kB 72%] [Waiting for headers] [Waiting for headers]\r98%
+        [35 Sources bzip2 0 B] [65 Packages 178 kB/248 kB 72%] [Waiting for headers\r98%
+        [65 Packages 178 kB/248 kB 72%] [Waiting for headers] [Waiting for headers]\r98%
+        [36 Packages bzip2 0 B] [65 Packages 178 kB/248 kB 72%] [Waiting for header\r98%
+        [65 Packages 178 kB/248 kB 72%] [Waiting for headers] [Waiting for headers]\r98%
+        [37 Packages bzip2 0 B] [65 Packages 178 kB/248 kB 72%] [Waiting for header\r98%
+        [65 Packages 178 kB/248 kB 72%] [Waiting for headers] [Waiting for headers]\r98%
+        [38 Packages bzip2 0 B] [65 Packages 178 kB/248 kB 72%] [Waiting for header\r98%
+        [65 Packages 178 kB/248 kB 72%] [Waiting for headers] [Waiting for headers]\r                                                                               \rGet:66
+        http://toolbelt.heroku.com ./ Packages [1,044 B]\r\n\r98% [65 Packages 178
+        kB/248 kB 72%] [Waiting for headers] [Waiting for headers]\r98% [39 Packages
+        bzip2 0 B] [65 Packages 178 kB/248 kB 72%] [Waiting for header\r98% [39 Packages
+        bzip2 0 B] [66 Packages gzip 0 B] [65 Packages 178 kB/248 kB 7\r98% [39 Packages
+        bzip2 0 B] [65 Packages 178 kB/248 kB 72%] [Waiting for header\r98% [65 Packages
+        178 kB/248 kB 72%] [Waiting for headers] [Connecting to toolbe\r98% [40 Packages
+        bzip2 0 B] [65 Packages 178 kB/248 kB 72%] [Waiting for header\r98% [65 Packages
+        178 kB/248 kB 72%] [Waiting for headers] [Connecting to toolbe\r98% [41 Packages
+        bzip2 0 B] [65 Packages 178 kB/248 kB 72%] [Waiting for header\r98% [65 Packages
+        178 kB/248 kB 72%] [Waiting for headers] [Connecting to toolbe\r98% [42 Packages
+        bzip2 0 B] [65 Packages 178 kB/248 kB 72%] [Waiting for header\r100% [65 Packages
+        248 kB/248 kB 100%] [Waiting for headers] [Connecting to tool\r                                                                               \rGet:67
+        http://security.ubuntu.com precise-security/restricted amd64 Packages [4,627
+        B]\r\n\r100% [67 Packages 4,627 B/4,627 B 100%] [Waiting for headers] [Connecting
+        to to\r100% [43 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers]
+        [Conne\r                                                                               \rGet:68
+        http://security.ubuntu.com precise-security/universe amd64 Packages [71.4
+        kB]\r\n\r98% [43 Packages bzip2 0 B] [68 Packages 7,175 B/71.4 kB 10%] [Waiting
+        for head\r98% [68 Packages 7,175 B/71.4 kB 10%] [Waiting for headers] [Connecting
+        to tool\r98% [49 Translation-en bzip2 0 B] [68 Packages 7,175 B/71.4 kB 10%]
+        [Waiting fo\r                                                                               \rIgn
+        http://www.rabbitmq.com testing/main Translation-en_US\r\n\r98% [49 Translation-en
+        bzip2 0 B] [68 Packages 7,175 B/71.4 kB 10%] [Waiting fo\r100% [49 Translation-en
+        bzip2 0 B] [Waiting for headers] [Connecting to toolbel\r                                                                               \rGet:69
+        http://security.ubuntu.com precise-security/multiverse amd64 Packages [2,182
+        B]\r\n\r100% [49 Translation-en bzip2 0 B] [69 Packages 0 B/2,182 B 0%] [Waiting
+        for he\r100% [49 Translation-en bzip2 0 B] [Waiting for headers] [Connecting
+        to toolbel\r                                                                               \rGet:70
+        http://security.ubuntu.com precise-security/main i386 Packages [259 kB]\r\n\r93%
+        [49 Translation-en bzip2 0 B] [70 Packages 20.5 kB/259 kB 8%] [Waiting for
+        \r94% [70 Packages 57.0 kB/259 kB 22%] [Waiting for headers] [Connecting to
+        toolb\r94% [50 Translation-en bzip2 0 B] [70 Packages 57.0 kB/259 kB 22%]
+        [Waiting for\r94% [70 Packages 57.0 kB/259 kB 22%] [Waiting for headers] [Connecting
+        to toolb\r94% [51 Translation-en bzip2 0 B] [70 Packages 57.0 kB/259 kB 22%]
+        [Waiting for\r                                                                               \rIgn
+        http://www.rabbitmq.com testing/main Translation-en\r\n\r94% [51 Translation-en
+        bzip2 0 B] [70 Packages 57.0 kB/259 kB 22%] [Connecting \r94% [70 Packages
+        57.0 kB/259 kB 22%] [Waiting for headers] [Connecting to toolb\r94% [52 Translation-en
+        bzip2 0 B] [70 Packages 57.0 kB/259 kB 22%] [Waiting for\r94% [70 Packages
+        57.0 kB/259 kB 22%] [Waiting for headers] [Connecting to toolb\r94% [56 Packages
+        bzip2 0 B] [70 Packages 57.0 kB/259 kB 22%] [Waiting for heade\r94% [70 Packages
+        57.0 kB/259 kB 22%] [Waiting for headers] [Connecting to toolb\r94% [57 Packages
+        bzip2 0 B] [70 Packages 57.0 kB/259 kB 22%] [Waiting for heade\r94% [70 Packages
+        57.0 kB/259 kB 22%] [Waiting for headers] [Connecting to toolb\r94% [53 Sources
+        bzip2 0 B] [70 Packages 57.0 kB/259 kB 22%] [Waiting for header\r94% [70 Packages
+        57.0 kB/259 kB 22%] [Waiting for headers] [Waiting for headers\r94% [58 Packages
+        bzip2 0 B] [70 Packages 57.0 kB/259 kB 22%] [Waiting for heade\r94% [70 Packages
+        57.3 kB/259 kB 22%] [Waiting for headers] [Waiting for headers\r94% [59 Packages
+        bzip2 0 B] [70 Packages 58.5 kB/259 kB 23%] [Waiting for heade\r94% [70 Packages
+        58.5 kB/259 kB 23%] [Waiting for headers] [Waiting for headers\r94% [60 Packages
+        bzip2 0 B] [70 Packages 58.5 kB/259 kB 23%] [Waiting for heade\r96% [70 Packages
+        112 kB/259 kB 43%] [Waiting for headers] [Waiting for headers]\r96% [61 Packages
+        bzip2 0 B] [70 Packages 112 kB/259 kB 43%] [Waiting for header\r98% [70 Packages
+        190 kB/259 kB 73%] [Waiting for headers] [Waiting for headers]\r98% [62 Sources
+        bzip2 0 B] [70 Packages 190 kB/259 kB 73%] [Waiting for headers\r99% [70 Packages
+        223 kB/259 kB 86%] [Waiting for headers] [Waiting for headers]\r99% [63 Sources
+        bzip2 0 B] [70 Packages 223 kB/259 kB 86%] [Waiting for headers\r99% [70 Packages
+        223 kB/259 kB 86%] [Waiting for headers] [Waiting for headers]\r99% [64 Sources
+        bzip2 0 B] [70 Packages 223 kB/259 kB 86%] [Waiting for headers\r99% [70 Packages
+        223 kB/259 kB 86%] [Waiting for headers] [Waiting for headers]\r99% [65 Packages
+        bzip2 0 B] [70 Packages 223 kB/259 kB 86%] [Waiting for header\r100% [65 Packages
+        bzip2 0 B] [Waiting for headers] [Connecting to heroku-toolbe\r                                                                               \rGet:71
+        http://security.ubuntu.com precise-security/restricted i386 Packages [4,620
+        B]\r\n\r100% [65 Packages bzip2 0 B] [71 Packages 4,620 B/4,620 B 100%] [Waiting
+        for he\r100% [65 Packages bzip2 0 B] [Waiting for headers] [Connecting to
+        heroku-toolbe\r                                                                               \rGet:72
+        http://security.ubuntu.com precise-security/universe i386 Packages [73.4 kB]\r\n\r98%
+        [65 Packages bzip2 0 B] [72 Packages 0 B/73.4 kB 0%] [Waiting for headers]
+        \r100% [65 Packages bzip2 0 B] [Waiting for headers] [Connecting to heroku-toolbe\r                                                                               \rGet:73
+        http://security.ubuntu.com precise-security/multiverse i386 Packages [2,368
+        B]\r\n\r100% [65 Packages bzip2 0 B] [73 Packages 2,368 B/2,368 B 100%] [Waiting
+        for he\r100% [65 Packages bzip2 0 B] [Waiting for headers] [Connecting to
+        heroku-toolbe\r                                                                               \rGet:74
+        http://security.ubuntu.com precise-security/main TranslationIndex [74 B]\r\n\r100%
+        [65 Packages bzip2 0 B] [74 TranslationIndex 74 B/74 B 100%] [Waiting for
+        \r100% [65 Packages bzip2 1,656 kB] [Waiting for headers] [Waiting for headers]
+        [\r                                                                               \rGet:75
+        http://security.ubuntu.com precise-security/multiverse TranslationIndex [71
+        B]\r\n\r                                                                               \rGet:76
+        http://security.ubuntu.com precise-security/restricted TranslationIndex [72
+        B]\r\n\r                                                                               \rGet:77
+        http://security.ubuntu.com precise-security/universe TranslationIndex [73
+        B]\r\n\r                                                                               \r100%
+        [Waiting for headers] [Connecting to heroku-toolbelt.s3.amazonaws.com]\r                                                                           \r100%
+        [67 Packages bzip2 0 B] [Waiting for headers] [Connecting to heroku-toolbe\r100%
+        [Waiting for headers] [Waiting for headers] [Connecting to heroku-toolbelt\r100%
+        [68 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [Conne\r100%
+        [Waiting for headers] [Waiting for headers] [Connecting to heroku-toolbelt\r100%
+        [69 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [Conne\r100%
+        [Waiting for headers] [Waiting for headers] [Connecting to heroku-toolbelt\r100%
+        [70 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [Conne\r                                                                               \rIgn
+        http://ppa.launchpad.net precise/main Translation-en_US\r\n\r100% [70 Packages
+        bzip2 0 B] [Waiting for headers] [Connecting to heroku-toolbe\r                                                                               \rGet:78
+        http://security.ubuntu.com precise-security/main Translation-en [120 kB]\r\n\r97%
+        [70 Packages bzip2 0 B] [78 Translation-en 1,129 B/120 kB 1%] [Waiting for
+        \r100% [70 Packages bzip2 0 B] [Waiting for headers] [Connecting to heroku-toolbe\r                                                                               \rHit
+        http://security.ubuntu.com precise-security/multiverse Translation-en\r\n\r100%
+        [70 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [Conne\r                                                                               \rGet:79
+        http://security.ubuntu.com precise-security/restricted Translation-en [1,253
+        B]\r\n\r100% [70 Packages bzip2 0 B] [79 Translation-en 1,253 B/1,253 B 100%]
+        [Waiting \r100% [70 Packages bzip2 0 B] [Waiting for headers] [Connecting
+        to heroku-toolbe\r                                                                               \r100%
+        [Waiting for headers] [Waiting for headers] [Waiting for headers]\r                                                                      \r100%
+        [71 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [Waiti\r                                                                               \r100%
+        [Waiting for headers] [Waiting for headers] [Waiting for headers]\r                                                                      \r100%
+        [72 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [Waiti\r                                                                               \rIgn
+        http://ppa.launchpad.net precise/main Translation-en\r\n\r                                                                               \r100%
+        [72 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers]\r                                                                        \rIgn
+        http://ppa.launchpad.net precise/main Translation-en_US\r\n\r100% [72 Packages
+        bzip2 0 B] [Waiting for headers] [Waiting for headers]\r                                                                        \rIgn
+        http://ppa.launchpad.net precise/main Translation-en\r\n\r                                                                        \r100%
+        [72 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [Waiti\r                                                                               \rIgn
+        http://ppa.launchpad.net precise/main Translation-en_US\r\n\r                                                                               \r100%
+        [72 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers]\r                                                                        \r100%
+        [Waiting for headers] [Waiting for headers] [Connecting to toolbelt.heroku\r100%
+        [73 Packages bzip2 0 B] [Waiting for headers] [Waiting for headers] [Conne\r100%
+        [Waiting for headers] [Waiting for headers] [Connecting to toolbelt.heroku\r100%
+        [78 Translation-en bzip2 0 B] [Waiting for headers] [Waiting for headers]
+        \r                                                                               \rGet:80
+        http://security.ubuntu.com precise-security/universe Translation-en [45.0
+        kB]\r\n\r100% [78 Translation-en bzip2 0 B] [80 Translation-en 28.7 kB/45.0
+        kB 64%] [Wai\r100% [78 Translation-en bzip2 0 B] [Waiting for headers] [Connecting
+        to toolbel\r                                                                               \r100%
+        [Waiting for headers] [Connecting to toolbelt.heroku.com]\r                                                              \r100%
+        [79 Translation-en bzip2 0 B] [Waiting for headers] [Connecting to toolbel\r                                                                               \r100%
+        [Waiting for headers] [Connecting to toolbelt.heroku.com]\r                                                              \r100%
+        [80 Translation-en bzip2 0 B] [Waiting for headers] [Connecting to toolbel\r                                                                               \r100%
+        [Waiting for headers] [Connecting to toolbelt.heroku.com]\r                                                              \rIgn
+        http://ppa.launchpad.net precise/main Translation-en\r\n\r100% [Waiting for
+        headers] [Connecting to toolbelt.heroku.com]\r                                                              \rIgn
+        http://ppa.launchpad.net precise/main Translation-en_US\r\n\r                                                              \rIgn
+        http://ppa.launchpad.net precise/main Translation-en\r\n\r100% [Waiting for
+        headers] [Connecting to toolbelt.heroku.com]\r                                                              \rIgn
+        http://ppa.launchpad.net precise/main Translation-en_US\r\n\r                                                              \r100%
+        [Connecting to toolbelt.heroku.com]\r                                        \rIgn
+        http://ppa.launchpad.net precise/main Translation-en\r\n\r100% [Connecting
+        to toolbelt.heroku.com]\r                                        \r100% [Connecting
+        to heroku-toolbelt.s3.amazonaws.com]\r                                                     \r100%
+        [Connecting to toolbelt.heroku.com]\r                                        \r100%
+        [Connecting to heroku-toolbelt.s3.amazonaws.com]\r                                                     \r100%
+        [Connecting to toolbelt.heroku.com]\r                                        \rIgn
+        http://toolbelt.heroku.com ./ Translation-en_US\r\n\r                                        \r100%
+        [Working]\r              \rIgn http://toolbelt.heroku.com ./ Translation-en\r\n\r100%
+        [Working]\r              \rFetched 3,786 kB in 4s (850 kB/s)\r\n\rReading
+        package lists... 0%\r\rReading package lists... 0%\r\rReading package lists...
+        1%\r\rReading package lists... 7%\r\rReading package lists... 7%\r\rReading
+        package lists... 7%\r\rReading package lists... 7%\r\rReading package lists...
+        29%\r\rReading package lists... 30%\r\rReading package lists... 30%\r\rReading
+        package lists... 31%\r\rReading package lists... 31%\r\rReading package lists...
+        38%\r\rReading package lists... 38%\r\rReading package lists... 38%\r\rReading
+        package lists... 38%\r\rReading package lists... 62%\r\rReading package lists...
+        62%\r\rReading package lists... 62%\r\rReading package lists... 62%\r\rReading
+        package lists... 64%\r\rReading package lists... 66%\r\rReading package lists...
+        66%\r\rReading package lists... 66%\r\rReading package lists... 66%\r\rReading
+        package lists... 66%\r\rReading package lists... 66%\r\rReading package lists...
+        80%\r\rReading package lists... 80%\r\rReading package lists... 84%\r\rReading
+        package lists... 84%\r\rReading package lists... 84%\r\rReading package lists...
+        84%\r\rReading package lists... 85%\r\rReading package lists... 85%\r\rReading
+        package lists... 85%\r\rReading package lists... 85%\r\rReading package lists...
+        89%\r\rReading package lists... 89%\r\rReading package lists... 89%\r\rReading
+        package lists... 89%\r\rReading package lists... 90%\r\rReading package lists...
+        90%\r\rReading package lists... 90%\r\rReading package lists... 90%\r\rReading
+        package lists... 92%\r\rReading package lists... 92%\r\rReading package lists...
+        92%\r\rReading package lists... 92%\r\rReading package lists... 92%\r\rReading
+        package lists... 92%\r\rReading package lists... 93%\r\rReading package lists...
+        93%\r\rReading package lists... 93%\r\rReading package lists... 93%\r\rReading
+        package lists... 93%\r\rReading package lists... 93%\r\rReading package lists...
+        93%\r\rReading package lists... 93%\r\rReading package lists... 93%\r\rReading
+        package lists... 93%\r\rReading package lists... 93%\r\rReading package lists...
+        93%\r\rReading package lists... 93%\r\rReading package lists... 93%\r\rReading
+        package lists... 93%\r\rReading package lists... 93%\r\rReading package lists...
+        93%\r\rReading package lists... 93%\r\rReading package lists... 93%\r\rReading
+        package lists... 93%\r\rReading package lists... 93%\r\rReading package lists...
+        93%\r\rReading package lists... 93%\r\rReading package lists... 93%\r\rReading
+        package lists... 93%\r\rReading package lists... 93%\r\rReading package lists...
+        93%\r\rReading package lists... 95%\r\rReading package lists... 95%\r\rReading
+        package lists... 95%\r\rReading package lists... 95%\r\rReading package lists...
+        95%\r\rReading package lists... 95%\r\rReading package lists... 95%\r\rReading
+        package lists... 95%\r\rReading package lists... 97%\r\rReading package lists...
+        97%\r\rReading package lists... 97%\r\rReading package lists... 97%\r\rReading
+        package lists... 97%\r\rReading package lists... 97%\r\rReading package lists...
+        97%\r\rReading package lists... 97%\r\rReading package lists... 98%\r\rReading
+        package lists... 98%\r\rReading package lists... 98%\r\rReading package lists...
+        98%\r\rReading package lists... 98%\r\rReading package lists... 98%\r\rReading
+        package lists... 98%\r\rReading package lists... 98%\r\rReading package lists...
+        98%\r\rReading package lists... 98%\r\rReading package lists... 98%\r\rReading
+        package lists... 98%\r\rReading package lists... 98%\r\rReading package lists...
+        98%\r\rReading package lists... 98%\r\rReading package lists... 98%\r\rReading
+        package lists... 98%\r\rReading package lists... 98%\r\rReading package lists...
+        99%\r\rReading package lists... 99%\r\rReading package lists... 99%\r\rReading
+        package lists... 99%\r\rReading package lists... 99%\r\rReading package lists...
+        99%\r\rReading package lists... 99%\r\rReading package lists... 99%\r\rReading
+        package lists... 99%\r\rReading package lists... 99%\r\rReading package lists...
+        99%\r\rReading package lists... 99%\r\rReading package lists... 99%\r\rReading
+        package lists... 99%\r\rReading package lists... 99%\r\rReading package lists...
+        99%\r\rReading package lists... 99%\r\rReading package lists... 99%\r\rReading
+        package lists... 99%\r\rReading package lists... 99%\r\rReading package lists...
+        Done\r\r\n\rReading package lists... 0%\r\rReading package lists... 100%\r\rReading
+        package lists... Done\r\r\n\rBuilding dependency tree... 0%\r\rBuilding dependency
+        tree... 0%\r\rBuilding dependency tree... 50%\r\rBuilding dependency tree...
+        50%\r\rBuilding dependency tree       \r\r\n\rReading state information...
+        0%\r\rReading state information... 0%\r\rReading state information... Done\r\r\nThe
+        following extra packages will be installed:\r\n  foreman heroku libruby1.9.1
+        ruby1.9.1\r\nSuggested packages:\r\n  ruby1.9.1-examples ri1.9.1 graphviz
+        ruby1.9.1-dev\r\nThe following NEW packages will be installed:\r\n  foreman
+        heroku heroku-toolbelt libruby1.9.1 ruby1.9.1\r\n0 upgraded, 5 newly installed,
+        0 to remove and 38 not upgraded.\r\nNeed to get 4,871 kB of archives.\r\nAfter
+        this operation, 12.6 MB of additional disk space will be used.\r\n\r\r0% [Working]\r            \rGet:1
+        http://us.archive.ubuntu.com/ubuntu/ precise-updates/main libruby1.9.1 amd64
+        1.9.3.0-1ubuntu2.6 [4,102 kB]\r\n\r            \r0% [1 libruby1.9.1 14.2 kB/4,102
+        kB 0%] [Connecting to heroku-toolbelt.s3.amazo\r                                                                               \rGet:2
+        http://toolbelt.heroku.com/ubuntu/ ./ foreman 0.60.0 [89.5 kB]\r\n\r                                                                               \r9%
+        [1 libruby1.9.1 434 kB/4,102 kB 11%] [2 foreman 8,635 B/89.5 kB 10%]\r                                                                       \r11%
+        [1 libruby1.9.1 434 kB/4,102 kB 11%] [Waiting for headers]\r                                                              \rGet:3
+        http://toolbelt.heroku.com/ubuntu/ ./ heroku 2.36.1 [641 kB]\r\n\r                                                              \r56%
+        [1 libruby1.9.1 2,636 kB/4,102 kB 64%] [3 heroku 1,094 B/641 kB 0%]\r                                                                       \r80%
+        [1 libruby1.9.1 3,170 kB/4,102 kB 77%]\r                                          \r99%
+        [Waiting for headers]\r                         \rGet:4 http://us.archive.ubuntu.com/ubuntu/
+        precise-updates/main ruby1.9.1 amd64 1.9.3.0-1ubuntu2.6 [37.5 kB]\r\n\r                         \r100%
+        [4 ruby1.9.1 16.4 kB/37.5 kB 44%] [Waiting for headers]\r                                                            \r100%
+        [Waiting for headers]\r                          \rGet:5 http://toolbelt.heroku.com/ubuntu/
+        ./ heroku-toolbelt 2.36.1 [628 B]\r\n\r                          \r100% [Working]\r              \rFetched
+        4,871 kB in 0s (8,242 kB/s)\r\nSelecting previously unselected package libruby1.9.1.\r\n(Reading
+        database ... \r(Reading database ... 5%\r(Reading database ... 10%\r(Reading
+        database ... 15%\r(Reading database ... 20%\r(Reading database ... 25%\r(Reading
+        database ... 30%\r(Reading database ... 35%\r(Reading database ... 40%\r(Reading
+        database ... 45%\r(Reading database ... 50%\r(Reading database ... 55%\r(Reading
+        database ... 60%\r(Reading database ... 65%\r(Reading database ... 70%\r(Reading
+        database ... 75%\r(Reading database ... 80%\r(Reading database ... 85%\r(Reading
+        database ... 90%\r(Reading database ... 95%\r(Reading database ... 100%\r(Reading
+        database ... 61434 files and directories currently installed.)\r\nUnpacking
+        libruby1.9.1 (from .../libruby1.9.1_1.9.3.0-1ubuntu2.6_amd64.deb) ...\r\nSelecting
+        previously unselected package ruby1.9.1.\r\nUnpacking ruby1.9.1 (from .../ruby1.9.1_1.9.3.0-1ubuntu2.6_amd64.deb)
+        ...\r\nSelecting previously unselected package foreman.\r\nUnpacking foreman
+        (from .../foreman_0.60.0_all.deb) ...\r\nSelecting previously unselected package
+        heroku.\r\nUnpacking heroku (from .../archives/heroku_2.36.1_all.deb) ...\r\nSelecting
+        previously unselected package heroku-toolbelt.\r\nUnpacking heroku-toolbelt
+        (from .../heroku-toolbelt_2.36.1_all.deb) ...\r\nProcessing triggers for man-db
+        ...\r\nSetting up libruby1.9.1 (1.9.3.0-1ubuntu2.6) ...\r\nSetting up ruby1.9.1
+        (1.9.3.0-1ubuntu2.6) ...\r\nupdate-alternatives: using /usr/bin/gem1.9.1 to
+        provide /usr/bin/gem (gem) in auto mode.\r\nSetting up foreman (0.60.0) ...\r\nSetting
+        up heroku (2.36.1) ...\r\nSetting up heroku-toolbelt (2.36.1) ...\r\nProcessing
+        triggers for libc-bin ...\r\nldconfig deferred processing now taking place\r\nInstalling
+        heroku-anvil... done\r\nChecking for app files to sync... done, 2 files needed\r\nUploading:
+        \u001B[1m......\u001B[0m\u001B[K\r\u001B]0;Uploading: ......\u0007Uploading:
+        \u001B[1m 76.1%\u001B[0m (ETA: 0s)\u001B[K\r\u001B]0;Uploading:  76.1% (ETA:
+        0s)\u0007Uploading: 100.0%\u001B[K\r\u001B]0;Uploading: 100.0%\u0007\u001B]0;\u0007\r\nLaunching
+        build process... done \r\r\nPreparing app for compilation... done \r\r\nFetching
+        buildpack... done \r\r\nDetecting buildpack... done, Ruby/Rack \r\r\nFetching
+        cache... empty \r\r\nCompiling app... \r\r\n  Installing dependencies using
+        Bundler version 1.3.2\r\r\n    Running: bundle install --without development:test
+        --path vendor/bundle --binstubs vendor/bundle/bin --deployment\r\r\n    Fetching
+        gem metadata from https://rubygems.org/........\r\r\n    Fetching gem metadata
+        from https://rubygems.org/..\r\r\n    Installing rake (10.0.2)\r\r\n    Installing
+        multipart-post (1.1.5)\r\r\n    Installing faraday (0.8.4)\r\r\n    Installing
+        faraday_middleware (0.9.0)\r\r\n    Installing json (1.7.5)\r\r\n    Installing
+        kgio (2.7.4)\r\r\n    Installing mustache (0.99.4)\r\r\n    Installing newrelic_rpm
+        (3.4.2.1)\r\r\n    Installing rack (1.4.1)\r\r\n    Installing rack-protection
+        (1.2.0)\r\r\n    Installing raindrops (0.10.0)\r\r\n    Installing sass (3.2.3)\r\r\n    Installing
+        tilt (1.3.3)\r\r\n    Installing sinatra (1.3.3)\r\r\n    Installing unicorn
+        (4.4.0)\r\r\n    Using bundler (1.3.2)\r\r\n    Your bundle is complete! It
+        was installed into ./vendor/bundle\r\r\n    Post-install message from newrelic_rpm:\r\r\n    PLEASE
+        NOTE:\r\r\n    Developer Mode is now a Rack middleware.\r\r\n    Developer
+        Mode is no longer available in Rails 2.1 and earlier.\r\r\n    However, starting
+        in version 2.12 you can use Developer Mode in any\r\r\n    Rack based framework,
+        in addition to Rails.  To install developer mode\r\r\n    in a non-Rails application,
+        just add NewRelic::Rack::DeveloperMode to\r\r\n    your middleware stack.\r\r\n    If
+        you are using JRuby, we recommend using at least version 1.4 or\r\r\n    later
+        because of issues with the implementation of the timeout library.\r\r\n    Refer
+        to the README.md file for more information.\r\r\n    Please see http://github.com/newrelic/rpm/blob/master/CHANGELOG\r\r\n    for
+        a complete description of the features and enhancements available\r\r\n    in
+        version 3.4 of the Ruby Agent.\r\r\n    Cleaning up the bundler cache.\r\r\n  Writing
+        config/database.yml to read from DATABASE_URL\r\r\nPutting cache... done \r\r\nCreating
+        slug... done \r\r\nUploading slug... done \r\r\nSuccess, slug is https://api.anvilworks.org/slugs/40df49a3-631a-442c-af9a-857ae6d93f59.tgz
+        \r\r\nReleasing to travis-lite... ...done, v45\r\ntravis_fold:end:after_success\r\r\nDone.
+        Your build exited with 0.\r\n"}}'
+    http_version: '1.1'
+  recorded_at: Sat, 20 Apr 2013 08:56:39 GMT
+recorded_with: VCR 2.4.0

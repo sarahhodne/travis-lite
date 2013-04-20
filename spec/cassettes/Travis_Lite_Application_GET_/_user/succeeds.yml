@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.travis-ci.org/repos/?owner_name=henrikhodne
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.travis-ci.2+json, */*; q=0.01
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - 30
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - Content-Type, Cache-Control, Expires, Etag, Last-Modified
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json;charset=utf-8
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept,Accept-Encoding
+      X-Accepted-Oauth-Scopes:
+      - public
+      X-Oauth-Scopes:
+      - public
+      Content-Length:
+      - '960'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"repos":[{"id":358872,"slug":"henrikhodne/travis-lite","description":"Travis
+        CI without the JavaScript","last_build_id":6489681,"last_build_number":"47","last_build_state":"failed","last_build_duration":163,"last_build_language":null,"last_build_started_at":"2013-04-20T08:06:59Z","last_build_finished_at":"2013-04-20T08:08:44Z"},{"id":820533,"slug":"henrikhodne/MGBenchmark","description":"Library
+        to measure code execution times easily","last_build_id":6396267,"last_build_number":"3","last_build_state":"errored","last_build_duration":10,"last_build_language":null,"last_build_started_at":"2013-04-16T21:53:12Z","last_build_finished_at":"2013-04-16T21:53:22Z"},{"id":542111,"slug":"henrikhodne/BubbleWrap","description":"Cocoa
+        wrappers and helpers for RubyMotion (Ruby for iOS) - Making Cocoa APIs more
+        Ruby like, one API at a time. Fork away and send your pull requests.","last_build_id":6377938,"last_build_number":"20","last_build_state":"failed","last_build_duration":232,"last_build_language":null,"last_build_started_at":"2013-04-16T09:28:59Z","last_build_finished_at":"2013-04-16T09:32:51Z"},{"id":437866,"slug":"henrikhodne/appium","description":"Automation
+        for Apps.","last_build_id":6175696,"last_build_number":"23","last_build_state":"errored","last_build_duration":14,"last_build_language":null,"last_build_started_at":"2013-04-09T05:10:59Z","last_build_finished_at":"2013-04-09T05:11:13Z"},{"id":429420,"slug":"henrikhodne/Mantle","description":"Model
+        framework for Cocoa and Cocoa Touch","last_build_id":6056884,"last_build_number":"11","last_build_state":"failed","last_build_duration":58,"last_build_language":null,"last_build_started_at":"2013-04-04T18:03:50Z","last_build_finished_at":"2013-04-04T18:04:48Z"},{"id":542591,"slug":"henrikhodne/Routable","description":"A
+        RubyMotion UIViewController -> URL router","last_build_id":5954107,"last_build_number":"1","last_build_state":"passed","last_build_duration":76,"last_build_language":null,"last_build_started_at":"2013-04-01T10:55:45Z","last_build_finished_at":"2013-04-01T10:57:01Z"},{"id":413918,"slug":"henrikhodne/test-travis-stuff","description":"","last_build_id":5214289,"last_build_number":"4","last_build_state":"passed","last_build_duration":8,"last_build_language":null,"last_build_started_at":"2013-03-04T00:56:08Z","last_build_finished_at":"2013-03-04T00:56:16Z"},{"id":429421,"slug":"henrikhodne/TestTravisApp","description":null,"last_build_id":4637065,"last_build_number":"4","last_build_state":"passed","last_build_duration":22,"last_build_language":null,"last_build_started_at":"2013-02-07T09:44:32Z","last_build_finished_at":"2013-02-07T09:44:54Z"},{"id":358831,"slug":"henrikhodne/travis-test-repo","description":"This
+        repository is used for various travis-ci testing.","last_build_id":3489268,"last_build_number":"5","last_build_state":"passed","last_build_duration":15,"last_build_language":null,"last_build_started_at":"2012-12-04T04:10:01Z","last_build_finished_at":"2012-12-04T04:10:16Z"},{"id":129863,"slug":"henrikhodne/leonardo","description":"IRC
+        bot used to enforce Clueful Chatting in ClueIRC","last_build_id":1946447,"last_build_number":"1","last_build_state":"failed","last_build_duration":134,"last_build_language":null,"last_build_started_at":"2012-07-24T23:45:45Z","last_build_finished_at":"2012-07-24T23:46:19Z"},{"id":121340,"slug":"henrikhodne/davinci.rb","description":"IRC
+        bot used to enforce Clueful Chatting in ClueIRC","last_build_id":1946425,"last_build_number":"11","last_build_state":"failed","last_build_duration":136,"last_build_language":null,"last_build_started_at":"2012-07-24T23:44:27Z","last_build_finished_at":"2012-07-24T23:45:03Z"}]}'
+    http_version: 
+  recorded_at: Sat, 20 Apr 2013 09:00:14 GMT
+recorded_with: VCR 2.4.0

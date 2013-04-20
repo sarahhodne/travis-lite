@@ -1,7 +1,8 @@
+require 'spec_helper'
 require 'travis/lite/application'
 require 'rack/test'
 
-describe Travis::Lite::Application, 'GET /:user/:repo/builds/:build_id', integration: true do
+describe Travis::Lite::Application, 'GET /:user/:repo/builds/:build_id', :integration, :vcr do
   include Rack::Test::Methods
 
   def app
