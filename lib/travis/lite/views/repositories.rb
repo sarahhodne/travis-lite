@@ -8,8 +8,8 @@ module Travis
           @repositories.map do |repository|
             {
               slug: repository.slug,
-              last_build_id: repository.last_build_id,
-              last_build_number: repository.last_build_number,
+              last_build_id: repository.last_build.id,
+              last_build_number: repository.last_build.number,
               last_build_status: format_build_status(build_status(repository)),
               row_class: class_for_build_status(build_status(repository)),
             }
@@ -19,8 +19,8 @@ module Travis
         private
 
         def build_status(repository)
-          if repository.last_build_finished?
-            repository.last_build_passed? ? :passed : :failed
+          if repository.last_build.finished?
+            repository.last_build.passed? ? :passed : :failed
           else
             :running
           end

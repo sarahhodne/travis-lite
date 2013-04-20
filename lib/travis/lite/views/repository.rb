@@ -19,8 +19,8 @@ module Travis
             id: build.id,
             number: build.number,
             status: format_build_status(build_status(build)),
-            message: build.message,
-            branch: build.branch,
+            message: build.commit.message,
+            branch: build.commit.branch,
             row_class: class_for_build_status(build_status(build)),
           }
         end

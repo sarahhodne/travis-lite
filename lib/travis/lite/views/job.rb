@@ -1,3 +1,4 @@
+require 'json'
 require 'travis/lite/views/layout'
 
 module Travis
@@ -27,13 +28,22 @@ module Travis
             build_id: job.build_id,
             status: format_build_status(job_status(job)),
             status_class: class_for_build_status(job_status(job)),
-            branch: job.branch,
-            config_label: job.config.label,
+            branch: job.commit.branch,
+            config_label: job_label(job.config),
             config: job.config.inspect,
-            compare_url: job.compare_url,
-            message: job.message,
-            log: job.log
+            compare_url: job.commit.compare_url,
+            message: job.commit.message,
+            log: job.log.clean_body
           }
+        end
+
+        def job_label(config)
+          keys = %w[rvm compiler env]
+          keys << config['language']
+
+          sub = config.values_at(keys).compact.join(" ")
+
+          "#{config['language']} #{sub}"
         end
 
         def job_status(job)
