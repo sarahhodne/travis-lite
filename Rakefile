@@ -8,7 +8,7 @@ RSpec::Core::RakeTask.new('spec:integration') do |task|
   task.rspec_opts = '--tag integration'
 end
 
-task spec: ['spec:unit', 'spec:integration']
+RSpec::Core::RakeTask.new(:spec)
 
 task default: :spec
 task test: :spec
