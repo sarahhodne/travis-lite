@@ -30,7 +30,7 @@ module Travis
             status_class: class_for_build_status(job_status(job)),
             branch: job.commit.branch,
             config_label: job_label(job.config),
-            config: job.config.inspect,
+            config: JSON.pretty_generate(job.config),
             compare_url: job.commit.compare_url,
             message: job.commit.message,
             log: job.log.clean_body
