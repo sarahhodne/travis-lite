@@ -1,6 +1,8 @@
 require 'bundler'
 Bundler.require(:default, :test)
 
+Coveralls.wear!
+
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/cassettes'
   config.hook_into :webmock
