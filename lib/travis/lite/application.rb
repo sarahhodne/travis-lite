@@ -92,10 +92,10 @@ module Travis
 
       error do
         @error = env['sinatra.error']
-        slim :error
+        mustache :error
       end
 
-      not_found { slim :not_found }
+      not_found { mustache :not_found }
     end
   end
 end
