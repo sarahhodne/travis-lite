@@ -53,35 +53,41 @@ module Travis
       get '/:user/:repo/?' do |user, repo|
         slug = "#{user}/#{repo}"
         @title = slug
-        @repository = Travis::Repository.find(slug)
-        @builds = @repository.recent_builds
-        mustache :repository
-      rescue Travis::Client::NotFound
-        not_found
+        begin
+          @repository = Travis::Repository.find(slug)
+          @builds = @repository.recent_builds
+          mustache :repository
+        rescue Travis::Client::NotFound
+          not_found
+        end
       end
 
       get '/:user/:repo/builds/:build/?' do |user, repo, build|
         slug = "#{user}/#{repo}"
         @title = slug
-        @repository = Travis::Repository.find(slug)
-        @build = @repository.builds(id: build).first
+        begin
+          @repository = Travis::Repository.find(slug)
+          @build = @repository.builds(id: build).first
+        rescue Travis::Client::NotFound
+          not_found
+        end
         if @build.jobs.size == 1
           redirect "#{slug}/jobs/#{@build.jobs.first.id}"
         else
           mustache :build
         end
-      rescue Travis::Client::NotFound
-        not_found
       end
 
       get '/:user/:repo/jobs/:job/?' do |user, repo, job|
         slug = "#{user}/#{repo}"
         @title = slug
-        @repository = Travis::Repository.find(slug)
-        @job = Travis::Job.find(job)
+        begin
+          @repository = Travis::Repository.find(slug)
+          @job = Travis::Job.find(job)
+        rescue Travis::Client::NotFound
+          not_found
+        end
         mustache :job
-      rescue Travis::Client::NotFound
-        not_found
       end
 
       error do
