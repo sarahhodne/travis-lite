@@ -56,6 +56,8 @@ module Travis
         @repository = Travis::Repository.find(slug)
         @builds = @repository.recent_builds
         mustache :repository
+      rescue Travis::Client::NotFound
+        not_found
       end
 
       get '/:user/:repo/builds/:build/?' do |user, repo, build|
@@ -68,6 +70,8 @@ module Travis
         else
           mustache :build
         end
+      rescue Travis::Client::NotFound
+        not_found
       end
 
       get '/:user/:repo/jobs/:job/?' do |user, repo, job|
@@ -76,14 +80,14 @@ module Travis
         @repository = Travis::Repository.find(slug)
         @job = Travis::Job.find(job)
         mustache :job
+      rescue Travis::Client::NotFound
+        not_found
       end
 
       error do
         @error = env['sinatra.error']
         erb :error
       end
-
-      error(Travis::Client::NotFound) { not_found }
 
       not_found { erb :not_found }
     end
