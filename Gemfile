@@ -13,6 +13,7 @@ gem 'sass', '~> 3.2'
 gem 'travis', '~> 1.2.0'
 
 gem 'newrelic_rpm'
+gem 'sentry-raven', github: 'getsentry/raven-ruby'
 
 group :test do
   gem 'rspec', '~> 2.12'
