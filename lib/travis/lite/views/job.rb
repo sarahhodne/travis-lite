@@ -33,11 +33,11 @@ module Travis
             config: JSON.pretty_generate(job.config),
             compare_url: job.commit.compare_url,
             message: job.commit.message,
-            log: job_log
+            log: job_log(job)
           }
         end
 
-        def job_log
+        def job_log(job)
           job.log ? job.log.clean_body : ""
         end
 
