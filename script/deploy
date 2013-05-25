@@ -27,4 +27,4 @@ if [[ "$TRAVIS" == "true" ]]; then
   heroku plugins:install https://github.com/ddollar/heroku-anvil
 fi
 
-heroku build -r travis-lite -b https://github.com/heroku/heroku-buildpack-ruby.git
+heroku build -r travis-lite-production -b https://github.com/heroku/heroku-buildpack-ruby.git
