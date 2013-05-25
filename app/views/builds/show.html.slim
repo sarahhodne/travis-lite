@@ -1,0 +1,18 @@
+== render partial: "shared/repository_header", locals: { repository: @build.repository, header_info: "Build #{@build.number}" }
+
+h2 Build Matrix
+
+table.table
+  thead
+    tr
+      th Job
+      th Job status
+      th Duration
+      th Finished
+  tbody
+    - @build.jobs.each do |job|
+      tr class=job.row_class
+        td = link_to(job.number, repository_job_path(job.url_info))
+        td = job.state
+        td = job.duration
+        td = job.finished_at

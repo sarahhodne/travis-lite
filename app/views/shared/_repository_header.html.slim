@@ -1,0 +1,9 @@
+header
+  h1
+    =' link_to(repository.owner_name, repositories_path(owner_name: repository.owner_name))
+    ' /
+    =' link_to(repository.name, repository_path(repository.url_info))
+
+    - if defined?(header_info)
+      ' –
+      =' header_info

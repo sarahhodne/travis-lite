@@ -1,0 +1,37 @@
+== render partial: "shared/repository_header", locals: { repository: @job.repository, header_info: "Job #{@job.number}" }
+
+ul
+  li
+    ' Repo:
+    = link_to(@job.repository.slug, repository_path(@job.repository.url_info))
+  li
+    ' Build
+    = link_to(@job.build.number, repository_build_path(@job.build.url_info))
+  li
+    ' Status:
+    span.label class="label-#{@job.row_class}"
+      = @job.state
+  li
+    ' Branch:
+    = @job.commit.branch
+  li
+    ' Language:
+    = @job.language
+  li
+    ' Compare on
+    = link_to("GitHub", @job.commit.compare_url)
+  li
+    | Message:
+    pre = @job.commit.message
+
+h2 Config
+
+pre = @job.config
+
+h2 Log
+
+- if @job.log
+  pre = @job.log.clean_body
+- else
+  p Log could not be found.
+

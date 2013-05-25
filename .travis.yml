@@ -1,11 +1,13 @@
 language: ruby
 rvm:
-  - 1.9.3
-  - rbx-19mode
+  - 2.0.0
+
 env:
   global:
-    - secure: "GGJCc4M20IcsaWe43rVbPGtMhXmq38Gv6z0ujJrEKUq64BLwEUqQy19tj5p9\nHubKf60r5kV3d6RCtJ5ib7BD259Ej+1B98hLLb4r5lpoFjqkImVU9Q1YvzCp\nIBXIeHZMahhhTfNbBgmD485feBae9IOB82xK0lQdVNo0E1bm8b8="
+    secure: "GGJCc4M20IcsaWe43rVbPGtMhXmq38Gv6z0ujJrEKUq64BLwEUqQy19tj5p9\nHubKf60r5kV3d6RCtJ5ib7BD259Ej+1B98hLLb4r5lpoFjqkImVU9Q1YvzCp\nIBXIeHZMahhhTfNbBgmD485feBae9IOB82xK0lQdVNo0E1bm8b8="
+
 after_success: script/deploy
+
 notifications:
   campfire:
     secure: "eeK3/rSe2N+JYy1T//1+Inrkv0DUTDaYidWUCxHC6Sv3E/XU881SLve71VuH\nmBQdto/gNxwj02bejqHSc6gvmpwQZwy5Uk+MHLz8ygAPTsoC7BGe+xhgL8p5\nSVv3vtdLPh8XKKK0PMqlzXwxAkf0qI3TT8WvibRZb8JXVpmVJ98="

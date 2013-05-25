@@ -1,0 +1,17 @@
+== render partial: "shared/repository_header", locals: { repository: @repository }
+
+table.table
+  thead
+    tr
+      th Build
+      th Build status
+      th Commit
+      th Message
+
+  tbody
+    - @repository.builds.each do |build|
+      tr class=build.row_class
+        td = link_to(build.number, repository_build_path(build.url_info))
+        td = build.state
+        td = build.commit_info
+        td = build.commit.subject

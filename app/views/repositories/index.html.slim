@@ -1,0 +1,21 @@
+h2
+  - if params[:owner_name]
+    | #{params[:owner_name]}'s repositories
+  - else
+    | Latest Builds
+
+table.table
+  thead
+    tr
+      th Repository Name
+      th Last Build
+      th Last Build Status
+  tbody
+  - @repositories.each do |repository|
+    tr class=repository.row_class
+      td
+        =' link_to(repository.owner_name, repositories_path(owner_name: repository.owner_name))
+        ' /
+        =  link_to(repository.name, repository_path(repository.url_info))
+      td = link_to(repository.last_build_number, repository_build_path(repository.last_build_url_info))
+      td = repository.last_build_state
