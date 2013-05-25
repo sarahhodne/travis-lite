@@ -8,8 +8,8 @@ if [[ "$TRAVIS" == "true" ]]; then
     echo "This is a pull request. No deployment will be done."
     exit 0
   fi
-  if [[ "$TRAVIS_RUBY_VERSION" != "1.9.3" ]]; then
-    echo "Testing on something other than 1.9.3. No deployment will be done."
+  if [[ "$TRAVIS_RUBY_VERSION" != "2.0.0" ]]; then
+    echo "Testing on something other than 2.0.0. No deployment will be done."
     exit 0
   fi
   if [[ "$TRAVIS_BRANCH" != "master" ]]; then
