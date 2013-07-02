@@ -3,13 +3,13 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.rc1'
+gem 'rails', '4.0.0'
 
 gem 'travis'
 gem 'draper'
 gem 'slim-rails'
 gem 'newrelic_rpm'
-gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
+gem 'sentry-raven', github: 'getsentry/raven-ruby'
 
 gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
 gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
@@ -17,7 +17,7 @@ gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 gem 'puma'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 2.3.1.2'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -45,6 +45,10 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
+end
+
+group :development do
+  gem 'foreman'
 end
 
 # Use ActiveModel has_secure_password
