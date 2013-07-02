@@ -31,7 +31,9 @@ pre = @job.config
 h2 Log
 
 - if @job.log
+  = link_to("Go to bottom of log", "#log-bottom")
   pre = @job.log.clean_body
+  div#log-bottom
 - else
   p Log could not be found.
 
