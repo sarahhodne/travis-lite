@@ -14,7 +14,7 @@ class OwnerNameContraint
   end
 
   def blacklisted?
-    BLACKLIST.any? { |blacklist_entry| blacklist_entry === owner_name }
+    BLACKLIST.include?(owner_name)
   end
 
   private
