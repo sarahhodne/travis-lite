@@ -25,6 +25,15 @@ describe "routing to repositories" do
     )
   end
 
+  it "routes repository names containing dots correctly" do
+    expect(get: "/henrikhodne/davinci.rb").to route_to(
+      controller: "repositories",
+      action: "show",
+      owner_name: "henrikhodne",
+      name: "davinci.rb",
+    )
+  end
+
   it "doesn't route /javascripts/application.js" do
     expect(get: "/javascripts/application.js").to_not be_routable
   end
